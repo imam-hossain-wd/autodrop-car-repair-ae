@@ -1,6 +1,7 @@
+import { SiteConfigType } from "@/types/site";
 import { RiFacebookCircleFill, RiInstagramFill, RiMailLine, RiMapPinLine, RiPhoneLine, RiPinterestFill, RiYoutubeFill } from "@remixicon/react";
 
-export const SiteConfig = {
+export const SiteConfig:SiteConfigType = {
     authorName: "Md Zahed",
     brandName: "AutoFix Mobile Mechanic Dubai",
     url: "https://www.autofixmechanicdubai.com",
