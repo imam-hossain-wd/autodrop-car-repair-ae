@@ -1,122 +1,243 @@
-// app/page.tsx (or a dedicated hero component)
-
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+    RiPhoneLine,
+    RiWhatsappLine,
+    RiTimeLine,
+    RiMapPinLine,
+    RiShieldCheckLine,
+    RiFlashlightLine
+} from "@remixicon/react";
 import { SiteConfig } from "@/config/siteConfig";
-import { RiArrowRightLine, RiCustomerService2Line, RiTimeLine } from "@remixicon/react";
 
+export function Hero() {
+    const {
+        numberCallLink,
+        whatsappCallLink,
+        responseTime,
+        city,
+        brandName,
+        serviceAreas,
+        foundedYear
+    } = SiteConfig;
 
-export default function Hero() {
-  const { brandName, description, displayNumber, numberCallLink } = SiteConfig;
+    //   const topAreas = serviceAreas.slice(0, 3).map(area => area.name);
 
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#faf6f0] via-white to-[#f3efe8]">
-      {/* subtle background pattern (optional) */}
-      <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-primary/5 blur-3xl" />
-      </div>
+    return (
+        <header className="relative w-full overflow-hidden">
+            {/* Ultra-Modern Background System */}
+            <div className="absolute inset-0 -z-10">
+                {/* Main gradient canvas */}
+                <div className="absolute inset-0 bg-rose-100" />
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/5 via-zinc-900/5 to-primary/10" /> */}
 
-      <div className="mx-auto max-w-7xl px-5 py-10 md:py-20 lg:py-24">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* left content */}
-          <div className="space-y-6">
-            {/* trust badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-              </span>
-              <span>Available 24/7 · 5-15 min arrival</span>
-            </div>
+                {/* Dynamic automotive-inspired shapes */}
+                <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="glow1" cx="20%" cy="30%" r="60%">
+                            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.15" />
+                            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+                        </radialGradient>
+                        <radialGradient id="glow2" cx="80%" cy="70%" r="50%">
+                            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.08" />
+                            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+                        </radialGradient>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#glow1)" />
+                    <rect width="100%" height="100%" fill="url(#glow2)" />
+                </svg>
 
-            <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-              Mobile Mechanic Dubai
-              <span className="block text-primary">At Your Doorstep</span>
-            </h1>
-
-            <p className="max-w-lg text-base text-gray-600 sm:text-lg">
-              {description}
-            </p>
-
-            {/* cta buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <a
-                href={numberCallLink}
-                className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-medium text-white transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50"
-              >
-                <RiCustomerService2Line className="mr-2 h-5 w-5" />
-                Call Now: {displayNumber}
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center justify-center rounded-full border border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary/30"
-              >
-                Our Services
-                <RiArrowRightLine className="ml-2 h-4 w-4" />
-              </a>
-            </div>
-
-            {/* trust indicators */}
-            <div className="flex flex-wrap items-center gap-6 pt-4">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <RiTimeLine className="h-5 w-5 text-primary" />
-                <span className="font-medium">Response: {SiteConfig.responseTime}</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <span className="flex items-center gap-0.5 text-primary">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  ))}
-                </span>
-                <span className="font-medium">4.9/5 · 200+ reviews</span>
-              </div>
-            </div>
-          </div>
-
-          {/* right visual: image + floating cards */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              {/* main image placeholder — replace with real image */}
-              <div className="aspect-square w-full rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 shadow-xl">
-                <div className="flex h-full items-center justify-center">
-                  <span className="text-6xl text-primary/30">🔧</span>
+                {/* Abstract automotive motion lines */}
+                <div className="absolute inset-0 opacity-[0.03]">
+                    <div className="absolute left-0 top-1/2 h-[1px] w-full bg-gradient-to-r from-transparent via-foreground to-transparent" />
+                    <div className="absolute left-1/4 top-1/3 h-[1px] w-3/4 rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                    <div className="absolute right-1/4 bottom-1/3 h-[1px] w-3/4 -rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                    <div className="absolute left-1/2 top-1/4 h-[1px] w-1/2 rotate-[160deg] bg-gradient-to-r from-transparent via-foreground to-transparent" />
                 </div>
-              </div>
 
-              {/* floating card 1 */}
-              <div className="absolute -bottom-3 -left-3 rounded-xl bg-white p-3 shadow-lg ring-1 ring-gray-100/50 sm:p-4">
-                <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-green-100 p-2 text-green-700">
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-900">Quick response</p>
-                    <p className="text-xs text-gray-500">5-15 min arrival</p>
-                  </div>
+                {/* Geometric composition */}
+                <div className="absolute inset-0 opacity-[0.04]">
+                    <div className="absolute left-[15%] top-[10%] h-32 w-32 rotate-45 border border-primary/30" />
+                    <div className="absolute right-[20%] top-[15%] h-24 w-24 -rotate-12 border border-primary/20" />
+                    <div className="absolute bottom-[20%] left-[10%] h-40 w-40 rotate-12 border border-primary/20" />
+                    <div className="absolute bottom-[15%] right-[15%] h-28 w-28 -rotate-45 border border-primary/30" />
+                    <div className="absolute left-[30%] top-[45%] h-16 w-16 rotate-6 border border-primary/10" />
+                    <div className="absolute right-[35%] bottom-[40%] h-20 w-20 -rotate-8 border border-primary/10" />
                 </div>
-              </div>
 
-              {/* floating card 2 */}
-              <div className="absolute -right-2 top-6 rounded-xl bg-white p-3 shadow-lg ring-1 ring-gray-100/50 sm:p-4">
-                <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-blue-100 p-2 text-blue-700">
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-900">Certified pros</p>
-                    <p className="text-xs text-gray-500">Warranty included</p>
-                  </div>
+                {/* Subtle grid with perspective */}
+                <div className="absolute inset-0 perspective-1000">
+                    <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-[size:60px_60px]" />
+                    <div className="absolute inset-0 opacity-[0.01] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-[size:30px_30px] -translate-y-1/2 scale-y-150" />
                 </div>
-              </div>
+
+                {/* Dynamic particle-like elements */}
+                {/* <div className="absolute inset-0">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full border border-primary/10 bg-primary/5"
+              style={{
+                width: `${Math.random() * 60 + 20}px`,
+                height: `${Math.random() * 60 + 20}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                transform: `rotate(${Math.random() * 360}deg)`,
+                opacity: 0.3 + Math.random() * 0.3,
+              }}
+            />
+          ))}
+        </div> */}
+
+                {/* Brand color accent gradients */}
+                <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-primary via-primary/50 to-transparent" />
+                <div className="absolute bottom-0 right-0 h-1 w-2/3 bg-gradient-to-l from-primary via-primary/50 to-transparent" />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+
+            <section className="container relative mx-auto px-4 py-8 md:py-12 lg:py-14">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+                    {/* Left Column - Content */}
+                    <div className="flex flex-col justify-center space-y-6 md:space-y-4">
+                        {/* Status Badge */}
+                        <div className="inline-flex w-fit items-center gap-2 rounded border border-primary/30 bg-background/50 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm md:text-sm">
+                            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
+                            <RiFlashlightLine className="h-3 w-3" />
+                            <span className="font-mono">Premium Car Repair</span>
+                        </div>
+
+                        <div className="space-y-3 md:space-y-4">
+                            <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+                                <span className="block">24/7 Mobile Mechanic</span>
+                                <span className="block bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+                                    Comes to You in {responseTime}
+                                </span>
+                                <span className="block text-xl font-normal ">
+                                    Anywhere in {city}
+                                </span>
+                            </h1>
+                            <p className="max-w-xl text-base leading-relaxed  md:text-md">
+                                Certified mechanics, transparent upfront pricing, and dealer-grade diagnostics
+                                delivered to your location. No towing fees, no workshop waiting.
+                            </p>
+                        </div>
+
+                        {/* CTA Buttons */}
+                        <div className="flex flex-wrap gap-3 md:gap-4">
+                            <Button size="lg" className="group px-6 shadow-lg shadow-primary/20 transition-all hover:shadow-primary/30 md:px-8">
+                                <a href={numberCallLink}>
+                                    <RiPhoneLine className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                                    Call Now
+                                </a>
+                            </Button>
+                            <Button variant="outline" size="lg" className="px-6 backdrop-blur-sm md:px-8">
+                                <a href={whatsappCallLink}>
+                                    <RiWhatsappLine className="mr-2 h-4 w-4" />
+                                    WhatsApp Us
+                                </a>
+                            </Button>
+                        </div>
+
+                        {/* Trust Strip */}
+                        <div className="flex flex-wrap items-center gap-4 pt-2 text-sm md:gap-6 md:text-base">
+                            <div className="flex items-center gap-2">
+                                <div className="rounded border border-primary/20 bg-primary/5 p-1 backdrop-blur-sm">
+                                    <RiTimeLine className="h-4 w-4 text-primary md:h-5 md:w-5" />
+                                </div>
+                                <span>24/7 Emergency</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="rounded border border-primary/20 bg-primary/5 p-1 backdrop-blur-sm">
+                                    <RiMapPinLine className="h-4 w-4 text-primary md:h-5 md:w-5" />
+                                </div>
+                                <span>{responseTime} Arrival</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="rounded border border-primary/20 bg-primary/5 p-1 backdrop-blur-sm">
+                                    <RiShieldCheckLine className="h-4 w-4 text-primary md:h-5 md:w-5" />
+                                </div>
+                                <span>Certified Mechanics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Visual Card */}
+                    <div className="flex items-center justify-center lg:justify-end">
+                        <Card className="relative w-full max-w-md overflow-hidden border-2 bg-background/80 p-6 shadow-2xl backdrop-blur-md transition-shadow hover:shadow-3xl md:p-8">
+                            {/* Card decorative elements */}
+                            <div className="absolute -right-32 -top-32 h-64 w-64 rounded-full border-2 border-primary/10 bg-primary/5 blur-2xl" />
+                            <div className="absolute -bottom-32 -left-32 h-48 w-48 rounded-full border-2 border-primary/10 bg-primary/5 blur-2xl" />
+                            <div className="absolute right-0 top-0 h-1 w-1/2 bg-linear-to-l from-primary/30 to-transparent" />
+
+                            <div className="relative space-y-4">
+                                <div className="flex items-start justify-between">
+                                    <div>
+                                        <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                                            Active Status
+                                        </h3>
+                                        <p className="flex items-center gap-2 text-md font-semibold">
+                                            <span className="inline-block h-3 w-3 animate-pulse rounded-full bg-green-500" />
+                                            Available Now
+                                        </p>
+                                    </div>
+                                    <span className="relative rounded border bg-primary px-3 py-1 text-xs font-medium text-primary-foreground shadow-sm">
+                                        <span className="absolute -inset-px rounded border border-primary/30" />
+                                        {responseTime} Response
+                                    </span>
+                                </div>
+
+                                <div className="border-t pt-4">
+                                    <div className="flex items-center gap-3 text-sm">
+                                        <RiMapPinLine className="h-5 w-5 text-primary" />
+                                        <span className="font-medium">Service Areas:</span>
+                                    </div>
+                                    <div className="mt-2 flex flex-wrap gap-2">
+                                        {serviceAreas.map((area) => (
+                                            <span
+                                                key={area.slug}
+                                                className="rounded border bg-muted/30 px-3 py-1 text-xs backdrop-blur-sm"
+                                            >
+                                                {area.name}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="border-t pt-4">
+                                    <div className="flex items-center gap-2 text-sm">
+                                        <span className="font-medium">Quick Quote:</span>
+                                        <span className="text-muted-foreground">
+                                            No hidden fees, upfront pricing
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="border-t pt-4">
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="rounded border border-primary/10 bg-primary/5 p-3 backdrop-blur-sm">
+                                            <div className="text-2xl font-bold text-primary">90%</div>
+                                            <div className="text-xs text-muted-foreground">Onsite Repairs</div>
+                                        </div>
+                                        <div className="rounded border border-primary/10 bg-primary/5 p-3 backdrop-blur-sm">
+                                            <div className="text-2xl font-bold text-primary">100%</div>
+                                            <div className="text-xs text-muted-foreground">Transparent Pricing</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="border-t pt-4">
+                                    <div className="flex items-center justify-between text-xs">
+                                        <div className="flex items-center gap-2">
+                                            <RiShieldCheckLine className="h-3 w-3" />
+                                            <span>Certified since {foundedYear}</span>
+                                        </div>
+                                        <span className="font-mono text-primary">{brandName}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
+                </div>
+            </section>
+        </header>
+    );
 }
