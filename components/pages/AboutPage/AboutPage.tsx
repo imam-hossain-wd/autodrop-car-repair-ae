@@ -1,6 +1,3 @@
-// app/about/page.tsx
-// About Us Page - Professional brand story page
-
 import { aboutUs, whyChooseUs } from "@/config/businessInfo";
 import { SiteConfig } from "@/config/siteConfig";
 import { 
@@ -19,10 +16,7 @@ import {
   RiTrophyLine,
   RiHeartLine,
   RiRocketLine,
-
-
 } from "@remixicon/react";
-import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -30,16 +24,13 @@ import { Button } from "@/components/ui/button";
 export default function AboutPage() {
   const { 
     brandName, 
-    city, 
-    country, 
+    city,  
     location, 
     foundedYear, 
     responseTime,
     displayNumber,
     numberCallLink,
     whatsappCallLink,
-    email,
-    streetAddress
   } = SiteConfig;
 
   // Stats for the page
@@ -125,7 +116,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative w-full overflow-hidden bg-zinc-950/50 border-y border-zinc-800">
+      <section className="relative w-full overflow-hidden bg-zinc-950">
         <div className="container mx-auto px-4 py-12 md:py-16">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {stats.map((stat, index) => {
@@ -152,7 +143,7 @@ export default function AboutPage() {
       {/* Our Story Section */}
       <section className="relative w-full overflow-hidden py-16 md:py-20">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-linear-to-b from-zinc-950 via-zinc-900/50 to-zinc-950" />
+          <div className="absolute inset-0 bg-zinc-950" />
           <div className="absolute -left-1/4 -top-1/4 h-150 w-150 rounded-full bg-primary/5 blur-3xl" />
           <div className="absolute -right-1/4 -bottom-1/4 h-150 w-150 rounded-full bg-primary/5 blur-3xl" />
         </div>
@@ -238,7 +229,7 @@ export default function AboutPage() {
       {/* Why Choose Us Section */}
       <section className="relative w-full overflow-hidden py-16 md:py-20">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-linear-to-b from-zinc-950 via-zinc-900/50 to-zinc-950" />
+          <div className="absolute inset-0 bg-zinc-950" />
           <div className="absolute -right-1/4 -top-1/4 h-200 w-200 rounded-full bg-primary/5 blur-3xl" />
         </div>
 
@@ -296,7 +287,7 @@ export default function AboutPage() {
       {/* Our Values Section */}
       <section className="relative w-full overflow-hidden py-16 md:py-20">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-linear-to-b from-zinc-950 via-zinc-900/50 to-zinc-950" />
+          <div className="absolute inset-0 bg-zinc-950" />
           <div className="absolute -left-1/4 -bottom-1/4 h-200 w-200 rounded-full bg-primary/5 blur-3xl" />
         </div>
 
