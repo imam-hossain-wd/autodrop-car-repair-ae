@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner} from "@/utils/assets";
 
 export const absSystemRepairService = {
     title: "ABS System Repair Dubai | Expert Car Brake Services",
@@ -16,8 +16,6 @@ export const absSystemRepairService = {
     ],
 
     slug: "abs-system-repair-dubai",
-
-    service_image: serviceImages?.spareParts,
     service_banner: ServiceBanner?.breakpad,
 
     intro: {

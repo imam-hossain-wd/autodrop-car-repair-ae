@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner} from "@/utils/assets";
 
 export const batteryReplacementService = {
     title: "Car Battery Replacement Dubai | 24/7 Mobile Battery Service Near You",
@@ -17,7 +17,7 @@ export const batteryReplacementService = {
     ],
 
     slug: "car-battery-replacement-dubai",
-    service_image: serviceImages?.carBattery,
+
     service_banner: ServiceBanner.batteryReplacement,
     intro: {
         heading: "24/7 Car Battery Replacement Service in Dubai",

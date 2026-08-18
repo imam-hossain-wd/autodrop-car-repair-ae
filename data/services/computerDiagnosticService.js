@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner } from "@/utils/assets";
 
 export const computerDiagnosticService = {
     title: "Car Computer Diagnostic Service Dubai | Mobile ECU Scan Near You",
@@ -18,7 +18,7 @@ export const computerDiagnosticService = {
 
     slug: "car-computer-diagnostic-service-dubai",
 
-    service_image: serviceImages?.computer,
+
     service_banner: ServiceBanner.computerDiagnostic,
 
     intro: {

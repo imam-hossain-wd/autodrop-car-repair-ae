@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner } from "@/utils/assets";
 
 export const mechanicService = {
   title: "Car Mechanic Service Dubai | Mobile Car Repair & Maintenance",
@@ -18,7 +18,7 @@ export const mechanicService = {
 
   slug: "car-mechanic-service-dubai",
 
-  service_image: serviceImages?.autoRepair,
+
   service_banner: ServiceBanner.mechanic,
 
   intro: {

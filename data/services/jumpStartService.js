@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner } from "@/utils/assets";
 
 export const jumpStartService = {
     title: "Car Jump Start Service Dubai | 24/7 Emergency Battery Boost Near You",
@@ -17,7 +17,7 @@ export const jumpStartService = {
 
     slug: "car-jump-start-dubai",
 
-    service_image: serviceImages?.carBattery,
+
     service_banner: ServiceBanner.jumpstart,
 
     intro: {

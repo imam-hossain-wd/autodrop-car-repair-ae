@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner } from "@/utils/assets";
 
 export const acGasRefillService = {
     title: "Car AC Gas Refill Dubai | Mobile & Professional AC Recharge Service",
@@ -16,8 +16,6 @@ export const acGasRefillService = {
     ],
 
     slug: "car-ac-gas-refill-service-dubai",
-
-    service_image: serviceImages?.airConditioner,
     service_banner: ServiceBanner?.gasRefill,
 
     intro: {

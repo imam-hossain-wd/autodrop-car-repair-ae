@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner} from "@/utils/assets";
 
 export const carRaditorRepair = {
     title: "Car Radiator Repair Dubai | Engine Overheating & Coolant Leak Fix Near You",
@@ -17,7 +17,7 @@ export const carRaditorRepair = {
 
     slug: "car-radiator-repair-dubai",
 
-    service_image: serviceImages?.engine,
+
     service_banner: ServiceBanner.raditor,
 
     intro: {

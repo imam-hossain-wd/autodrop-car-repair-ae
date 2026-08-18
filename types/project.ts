@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   area: string;
   service: string;
-  image: string;
+  image?: string;
 }
 
 export interface ProjectsProps {

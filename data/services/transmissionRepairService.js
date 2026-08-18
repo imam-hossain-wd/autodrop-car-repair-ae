@@ -1,4 +1,4 @@
-import { ServiceBanner, serviceImages } from "@/utils/assets";
+import { ServiceBanner} from "@/utils/assets";
 
 export const transmissionRepairService = {
     title: "Car Transmission Repair Dubai | Automatic & Manual Transmission Service",
@@ -17,7 +17,7 @@ export const transmissionRepairService = {
 
     slug: "car-transmission-repair-dubai",
 
-    service_image: serviceImages?.gear,
+
     service_banner: ServiceBanner.transmission,
 
     intro: {
