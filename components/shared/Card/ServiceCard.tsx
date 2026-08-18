@@ -122,7 +122,7 @@ export function ServiceCard({
   const iconColor = iconColorMap[name] || "text-primary";
 
   const cardClasses = cn(
-    "group relative block overflow-hidden border bg-background/50 transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5",
+    "group relative block overflow-hidden border bg-background transition-all duration-300 border-primary/30 shadow-xl shadow-primary/5",
     {
       "p-5 md:p-6": variant === "default",
       "p-3 md:p-4": variant === "compact",
@@ -155,7 +155,7 @@ export function ServiceCard({
   return (
     <div className={cardClasses}>
       {/* Background gradient on hover */}
-      <div className={`absolute inset-0 ${colorClass} opacity-0 transition-opacity duration-500 group-hover:opacity-100`} />
+      <div className={`absolute inset-0 ${colorClass} opacity-100 transition-opacity duration-500  bg-white`} />
       
       {/* Glow effect */}
       <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -165,7 +165,16 @@ export function ServiceCard({
         {/* Header with Icon and Name */}
         <div className="flex items-start gap-4">
           {/* Icon with ring */}
-          <div className="relative flex-shrink-0">
+          <div className="relative shrink-0">
+            <div className={`absolute inset-0 rounded-full border border-black   blur-sm`} />
+            <div className={cn(
+              "relative flex items-center justify-center rounded-full border-2 border-primary bg-primary backdrop-blur-sm transition-all duration-300  ",
+              iconWrapperSize[variant]
+            )}>
+              <Icon className={cn(iconInnerSize[variant], "transition-transform duration-300 text-black")} />
+            </div>
+          </div>
+          {/* <div className="relative flex-shrink-0">
             <div className={`absolute inset-0 rounded-full border ${colorClass} opacity-20 blur-sm`} />
             <div className={cn(
               "relative flex items-center justify-center rounded-full border bg-background/80 backdrop-blur-sm transition-all duration-300 group-hover:bg-background/60 group-hover:scale-110",
@@ -173,14 +182,14 @@ export function ServiceCard({
             )}>
               <Icon className={cn(iconInnerSize[variant], iconColor, "transition-transform duration-300")} />
             </div>
-          </div>
+          </div> */}
 
           {/* Name and Link */}
           <div className="flex-1 min-w-0">
             <Link href={`/services/${slug}`} className="block">
               <h3 className={cn(
-                "font-semibold leading-tight tracking-tight text-foreground transition-colors hover:text-primary",
-                textSize[variant]
+                "font-semibold leading-tight tracking-tight text-foreground transition-colors hover:text-primary text-sm",
+                // textSize[variant]
               )}>
                 {name}
               </h3>
@@ -189,7 +198,7 @@ export function ServiceCard({
             {showArrow && (
               <Link 
                 href={`/services/${slug}`}
-                className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-primary/70 transition-all hover:text-primary"
+                className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-primary transition-all  "
               >
                 <span>Learn More</span>
                 <RiArrowRightSLine className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -202,58 +211,23 @@ export function ServiceCard({
         {showFeatures && features.length > 0 && (
           <div className="mt-4 space-y-2">
             <div className="flex items-center gap-2">
-              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground/60">
+              <span className="text-xs font-medium uppercase tracking-wider text-">
                 Key Features
               </span>
-              <div className="h-px flex-1 bg-gradient-to-r from-primary/20 to-transparent" />
+              <div className="h-px flex-1 bg-primary" />
             </div>
 
             <div className="space-y-1.5">
               {featuresToShow.map((feature, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-2 text-xs text-muted-foreground transition-colors group-hover:text-foreground/80"
+                  className="flex items-start gap-2 text-xs  transition-colors "
                 >
-                  <RiCheckLine className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-primary" />
+                  <RiCheckLine className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-black" />
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
-
-            {/* Expand/Collapse button for more features */}
-            {hasMoreFeatures && (
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary/70 transition-colors hover:text-primary"
-              >
-                {isExpanded ? (
-                  <>
-                    <RiArrowUpSLine className="h-4 w-4" />
-                    Show Less
-                  </>
-                ) : (
-                  <>
-                    <RiArrowDownSLine className="h-4 w-4" />
-                    Show {features.length - 4} More Features
-                  </>
-                )}
-              </button>
-            )}
-
-            {/* Expanded features */}
-            {isExpanded && hasMoreFeatures && (
-              <div className="mt-1.5 space-y-1.5 border-t border-primary/10 pt-2">
-                {features.slice(4).map((feature, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start gap-2 text-xs text-muted-foreground transition-colors group-hover:text-foreground/80"
-                  >
-                    <RiCheckLine className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-primary" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         )}
 
@@ -261,7 +235,7 @@ export function ServiceCard({
         <div className="mt-4 pt-3 border-t border-primary/5">
           <Link
             href={`/services/${slug}`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded border border-primary/20 bg-primary/5 px-4 py-2 text-xs font-medium text-primary transition-all hover:bg-primary/10 hover:border-primary/30"
+            className="inline-flex w-full items-center justify-center gap-2 rounded border border-primary/20 bg-primary px-4 py-2 text-xs font-medium text-black transition-all hover:bg-primary/10 hover:border-primary/30"
           >
             <span>Get This Service</span>
             <RiArrowRightSLine className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -270,8 +244,8 @@ export function ServiceCard({
       </div>
 
       {/* Corner accents */}
-      <div className="absolute right-0 top-0 h-6 w-6 border-r-2 border-t-2 border-primary/0 transition-all duration-300 group-hover:border-primary/20" />
-      <div className="absolute bottom-0 left-0 h-6 w-6 border-b-2 border-l-2 border-primary/0 transition-all duration-300 group-hover:border-primary/20" />
+      <div className="absolute right-0 top-0 h-6 w-6 border-r-2 border-t-2 border-primary/0 transition-all duration-300 border-primary/20" />
+      <div className="absolute bottom-0 left-0 h-6 w-6 border-b-2 border-l-2 border-primary/0 transition-all duration-300 border-primary/20" />
       
       {/* Subtle shimmer on hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

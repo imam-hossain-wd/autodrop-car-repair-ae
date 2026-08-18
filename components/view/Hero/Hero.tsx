@@ -25,13 +25,13 @@ export function Hero() {
     //   const topAreas = serviceAreas.slice(0, 3).map(area => area.name);
 
 
-            // <footer className="relative overflow-hidden bg-gradient-to-b from-neutral-900 via-neutral-950 to-black">
-            // {/* Background Decorations */}
-            // <div className="absolute inset-0">
-            //     <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-red-600/5 blur-3xl" />
-            //     <div className="absolute left-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/5 blur-3xl" />
-            //     <div className="absolute top-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-3xl" />
-            // </div>
+    // <footer className="relative overflow-hidden bg-gradient-to-b from-neutral-900 via-neutral-950 to-black">
+    // {/* Background Decorations */}
+    // <div className="absolute inset-0">
+    //     <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-red-600/5 blur-3xl" />
+    //     <div className="absolute left-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/5 blur-3xl" />
+    //     <div className="absolute top-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-3xl" />
+    // </div>
 
 
     return (
@@ -40,38 +40,13 @@ export function Hero() {
             <div className="absolute inset-0 -z-10">
                 {/* Main gradient canvas */}
                 <div className="absolute inset-0 bg-gradient-to-b from-neutral-700 via-neutral-950 to-black/90" />
-                {/* <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/5 via-zinc-900/5 to-primary/10" /> */}
 
-                {/* Dynamic automotive-inspired shapes */}
-                {/* <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="glow1" cx="20%" cy="30%" r="60%">
-                            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.15" />
-                            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
-                        </radialGradient>
-                        <radialGradient id="glow2" cx="80%" cy="70%" r="50%">
-                            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.08" />
-                            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
-                        </radialGradient>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#glow1)" />
-                    <rect width="100%" height="100%" fill="url(#glow2)" />
-                </svg> */}
-
-                {/* Abstract automotive motion lines */}
-                {/* <div className="absolute inset-0 opacity-[0.03]">
-                    <div className="absolute left-0 top-1/2 h-[1px] w-full bg-gradient-to-r from-transparent via-foreground to-transparent" />
-                    <div className="absolute left-1/4 top-1/3 h-[1px] w-3/4 rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
-                    <div className="absolute right-1/4 bottom-1/3 h-[1px] w-3/4 -rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
-                    <div className="absolute left-1/2 top-1/4 h-[1px] w-1/2 rotate-[160deg] bg-gradient-to-r from-transparent via-foreground to-transparent" />
-                </div> */}
-
-                          {/* Background Decorations */}
-            <div className="absolute inset-0">
-                <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-red-600/5 blur-3xl" />
-                <div className="absolute left-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/5 blur-3xl" />
-                <div className="absolute top-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-3xl" />
-            </div>
+                {/* Background Decorations */}
+                <div className="absolute inset-0">
+                    <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-yellow-600/5 blur-3xl" />
+                    <div className="absolute left-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/5 blur-3xl" />
+                    <div className="absolute top-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-3xl" />
+                </div>
 
 
                 {/* Geometric composition */}
@@ -89,24 +64,6 @@ export function Hero() {
                     <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-[size:60px_60px]" />
                     <div className="absolute inset-0 opacity-[0.01] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-[size:30px_30px] -translate-y-1/2 scale-y-150" />
                 </div>
-
-                {/* Dynamic particle-like elements */}
-                {/* <div className="absolute inset-0">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full border border-primary/10 bg-primary/5"
-              style={{
-                width: `${Math.random() * 60 + 20}px`,
-                height: `${Math.random() * 60 + 20}px`,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-                opacity: 0.3 + Math.random() * 0.3,
-              }}
-            />
-          ))}
-        </div> */}
 
                 {/* Brand color accent gradients */}
                 <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-primary via-primary/50 to-transparent" />
@@ -127,13 +84,13 @@ export function Hero() {
                             <h1 className="text-3xl  font-bold leading-tight md:text-4xl lg:text-5xl">
                                 <span className="block">24/7 Mobile Mechanic</span>
                                 <span className="block text-primary">
-                                {/* <span className="block bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent"> */}
-                                    Comes to You in {responseTime} 
+                                    {/* <span className="block bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent"> */}
+                                    Comes to You in {responseTime}
                                     <span className="ml-3 text-xl text-white font-normal ">
-                                    Anywhere in {city}
+                                        Anywhere in {city}
+                                    </span>
                                 </span>
-                                </span>
-                                
+
                             </h1>
                             <p className="max-w-xl text-base leading-relaxed  md:text-md">
                                 Certified mechanics, transparent upfront pricing, and dealer-grade diagnostics
@@ -143,7 +100,7 @@ export function Hero() {
 
                         {/* CTA Buttons */}
                         <div className="flex gap-3 md:gap-4">
-                            <Button size="lg" className="group px-6 shadow-lg shadow-primary/20 transition-all hover:shadow-primary/30 md:px-8">
+                            <Button size="lg" className="group px-6 shadow-lg s transition-all  md:px-8 text-black">
                                 <Link className="flex" href={numberCallLink}>
                                     <RiPhoneLine className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
                                     Call Now
@@ -199,7 +156,7 @@ export function Hero() {
                                             Available Now
                                         </p>
                                     </div>
-                                    <span className="relative rounded border bg-primary px-3 py-1 text-xs font-medium text-primary-foreground shadow-sm">
+                                    <span className="relative rounded border bg-primary px-3 py-1 text-xs font-medium">
                                         <span className="absolute -inset-px rounded border border-primary/30" />
                                         {responseTime} Response
                                     </span>
@@ -214,7 +171,7 @@ export function Hero() {
                                         {serviceAreas.map((area) => (
                                             <span
                                                 key={area.slug}
-                                                className="rounded border text-white bg-primary/10 px-3 py-1 text-xs backdrop-blur-sm"
+                                                className="rounded text-white  px-3 py-1 text-xs backdrop-blur-sm"
                                             >
                                                 {area.name}
                                             </span>
@@ -233,13 +190,13 @@ export function Hero() {
 
                                 <div className="border-t pt-4">
                                     <div className="grid grid-cols-2 gap-3">
-                                        <div className="rounded border border-primary/10 bg-white p-3 backdrop-blur-sm">
+                                        <div className="rounded border border-primary/10  p-3 backdrop-blur-sm">
                                             <div className="text-2xl font-bold text-primary">90%</div>
-                                            <div className="text-xs text-">Onsite Repairs</div>
+                                            <div className="text-xs text-white">Onsite Repairs</div>
                                         </div>
-                                        <div className="rounded border border-primary/10 bg-white p-3 backdrop-blur-sm">
+                                        <div className="rounded border border-primary/10  p-3 backdrop-blur-sm">
                                             <div className="text-2xl font-bold text-primary">100%</div>
-                                            <div className="text-xs text-">Transparent Pricing</div>
+                                            <div className="text-xs text-white">Transparent Pricing</div>
                                         </div>
                                     </div>
                                 </div>

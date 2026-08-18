@@ -58,9 +58,26 @@ export function FeaturedServices({
   const displayServices = featuredServices.length > 0 ? featuredServices : services.slice(0, limit);
 
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-black/5">
       {/* Ultra-Modern Background */}
       <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-linear-to-b from-background via-background/98 to-primary/5" />
+
+       
+        <div className="absolute -left-1/4 -top-1/4 h-200 w-200 
+        rounded-full bg-primary/5 blur-3xl" /> 
+  
+        <div className="absolute -bottom-1/4 -right-1/4 h-150 w-150 rounded-full bg-primary/5 blur-3xl" />
+
+        <div className="absolute left-1/2 top-1/2 h-100 w-100 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
+
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-size-[40px_40px]" />
+
+        <div className="absolute bottom-0 left-0 h-px w-2/3 bg-linear-to-r from-primary/30 to-transparent" />
+        
+        <div className="absolute right-0 top-0 h-px w-1/2 bg-linear-to-l from-primary/30 to-transparent" />
+      </div>
+      {/* <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/98 to-primary/8" />
         <div className="absolute -left-1/4 -top-1/4 h-[800px] w-[800px] rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute -bottom-1/4 -right-1/4 h-[600px] w-[600px] rounded-full bg-primary/5 blur-3xl" />
@@ -68,7 +85,8 @@ export function FeaturedServices({
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="absolute bottom-0 left-0 h-px w-2/3 bg-gradient-to-r from-primary/30 to-transparent" />
         <div className="absolute right-0 top-0 h-px w-1/2 bg-gradient-to-l from-primary/30 to-transparent" />
-      </div>
+      </div> */}
+      
 
       <div className="container relative mx-auto px-4 py-8 md:py-10 lg:py-12">
         {/* Section Header */}
