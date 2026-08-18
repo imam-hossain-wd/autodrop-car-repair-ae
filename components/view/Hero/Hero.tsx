@@ -35,7 +35,7 @@ export function Hero() {
 
 
     return (
-        <header className="relative w-full overflow-hidden">
+        <header className="relative w-full overflow-hidden mt-20">
             {/* Ultra-Modern Background System */}
             <div className="absolute inset-0 -z-10">
                 {/* Main gradient canvas */}
