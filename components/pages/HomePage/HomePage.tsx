@@ -1,6 +1,7 @@
 import { FAQ } from "@/components/view/FAQ/FAQ";
 import { Hero } from "@/components/view/Hero/Hero";
 import HowItWorks from "@/components/view/HowItWorks/HowItWorks";
+import { Projects } from "@/components/view/Projects/Projects";
 import { ServiceMap } from "@/components/view/ServiceMap/ServiceMap";
 import Extra from "@/components/view/WhoWeAre/Extra";
 import { WhoWeAre } from "@/components/view/WhoWeAre/WhoWeAre";
@@ -14,6 +15,7 @@ export default function HomePage() {
             <HowItWorks />
             <WhoWeAre />
             <WhyChooseUs />
+            <Projects />
             <ServiceMap />
             <FAQ />
         </div>
