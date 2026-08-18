@@ -9,6 +9,7 @@ import {
     RiFlashlightLine
 } from "@remixicon/react";
 import { SiteConfig } from "@/config/siteConfig";
+import Link from "next/link";
 
 export function Hero() {
     const {
@@ -23,16 +24,26 @@ export function Hero() {
 
     //   const topAreas = serviceAreas.slice(0, 3).map(area => area.name);
 
+
+            // <footer className="relative overflow-hidden bg-gradient-to-b from-neutral-900 via-neutral-950 to-black">
+            // {/* Background Decorations */}
+            // <div className="absolute inset-0">
+            //     <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-red-600/5 blur-3xl" />
+            //     <div className="absolute left-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/5 blur-3xl" />
+            //     <div className="absolute top-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-3xl" />
+            // </div>
+
+
     return (
         <header className="relative w-full overflow-hidden">
             {/* Ultra-Modern Background System */}
             <div className="absolute inset-0 -z-10">
                 {/* Main gradient canvas */}
-                <div className="absolute inset-0 bg-rose-100" />
+                <div className="absolute inset-0 bg-gradient-to-b from-neutral-700 via-neutral-950 to-black/90" />
                 {/* <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/5 via-zinc-900/5 to-primary/10" /> */}
 
                 {/* Dynamic automotive-inspired shapes */}
-                <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                {/* <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <radialGradient id="glow1" cx="20%" cy="30%" r="60%">
                             <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.15" />
@@ -45,15 +56,23 @@ export function Hero() {
                     </defs>
                     <rect width="100%" height="100%" fill="url(#glow1)" />
                     <rect width="100%" height="100%" fill="url(#glow2)" />
-                </svg>
+                </svg> */}
 
                 {/* Abstract automotive motion lines */}
-                <div className="absolute inset-0 opacity-[0.03]">
+                {/* <div className="absolute inset-0 opacity-[0.03]">
                     <div className="absolute left-0 top-1/2 h-[1px] w-full bg-gradient-to-r from-transparent via-foreground to-transparent" />
                     <div className="absolute left-1/4 top-1/3 h-[1px] w-3/4 rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
                     <div className="absolute right-1/4 bottom-1/3 h-[1px] w-3/4 -rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
                     <div className="absolute left-1/2 top-1/4 h-[1px] w-1/2 rotate-[160deg] bg-gradient-to-r from-transparent via-foreground to-transparent" />
-                </div>
+                </div> */}
+
+                          {/* Background Decorations */}
+            <div className="absolute inset-0">
+                <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-red-600/5 blur-3xl" />
+                <div className="absolute left-0 top-1/2 h-[400px] w-[400px] rounded-full bg-orange-600/5 blur-3xl" />
+                <div className="absolute top-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-blue-600/5 blur-3xl" />
+            </div>
+
 
                 {/* Geometric composition */}
                 <div className="absolute inset-0 opacity-[0.04]">
@@ -99,21 +118,22 @@ export function Hero() {
                     {/* Left Column - Content */}
                     <div className="flex flex-col justify-center space-y-6 md:space-y-4">
                         {/* Status Badge */}
-                        <div className="inline-flex w-fit items-center gap-2 rounded border border-primary/30 bg-background/50 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm md:text-sm">
-                            <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
+                        {/* <div className="inline-flex w-fit items-center gap-2 rounded border border-white bg-background/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm md:text-sm">
                             <RiFlashlightLine className="h-3 w-3" />
                             <span className="font-mono">Premium Car Repair</span>
-                        </div>
+                        </div> */}
 
-                        <div className="space-y-3 md:space-y-4">
-                            <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+                        <div className="space-y-3 md:space-y-4 text-white">
+                            <h1 className="text-3xl  font-bold leading-tight md:text-4xl lg:text-5xl">
                                 <span className="block">24/7 Mobile Mechanic</span>
-                                <span className="block bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-                                    Comes to You in {responseTime}
-                                </span>
-                                <span className="block text-xl font-normal ">
+                                <span className="block text-primary">
+                                {/* <span className="block bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent"> */}
+                                    Comes to You in {responseTime} 
+                                    <span className="ml-3 text-xl text-white font-normal ">
                                     Anywhere in {city}
                                 </span>
+                                </span>
+                                
                             </h1>
                             <p className="max-w-xl text-base leading-relaxed  md:text-md">
                                 Certified mechanics, transparent upfront pricing, and dealer-grade diagnostics
@@ -122,23 +142,23 @@ export function Hero() {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-wrap gap-3 md:gap-4">
+                        <div className="flex gap-3 md:gap-4">
                             <Button size="lg" className="group px-6 shadow-lg shadow-primary/20 transition-all hover:shadow-primary/30 md:px-8">
-                                <a href={numberCallLink}>
+                                <Link className="flex" href={numberCallLink}>
                                     <RiPhoneLine className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
                                     Call Now
-                                </a>
+                                </Link>
                             </Button>
                             <Button variant="outline" size="lg" className="px-6 backdrop-blur-sm md:px-8">
-                                <a href={whatsappCallLink}>
+                                <Link className="flex" href={whatsappCallLink}>
                                     <RiWhatsappLine className="mr-2 h-4 w-4" />
                                     WhatsApp Us
-                                </a>
+                                </Link>
                             </Button>
                         </div>
 
                         {/* Trust Strip */}
-                        <div className="flex flex-wrap items-center gap-4 pt-2 text-sm md:gap-6 md:text-base">
+                        <div className="flex flex-wrap items-center gap-4 pt-2 text-sm md:gap-6 md:text-base text-white">
                             <div className="flex items-center gap-2">
                                 <div className="rounded border border-primary/20 bg-primary/5 p-1 backdrop-blur-sm">
                                     <RiTimeLine className="h-4 w-4 text-primary md:h-5 md:w-5" />
@@ -162,20 +182,20 @@ export function Hero() {
 
                     {/* Right Column - Visual Card */}
                     <div className="flex items-center justify-center lg:justify-end">
-                        <Card className="relative w-full max-w-md overflow-hidden border-2 bg-background/80 p-6 shadow-2xl backdrop-blur-md transition-shadow hover:shadow-3xl md:p-8">
+                        <Card className="relative w-full max-w-md overflow-hidden border-2 bg-background/5 p-6 shadow-2xl backdrop-blur-md transition-shadow hover:shadow-3xl md:p-8">
                             {/* Card decorative elements */}
                             <div className="absolute -right-32 -top-32 h-64 w-64 rounded-full border-2 border-primary/10 bg-primary/5 blur-2xl" />
                             <div className="absolute -bottom-32 -left-32 h-48 w-48 rounded-full border-2 border-primary/10 bg-primary/5 blur-2xl" />
                             <div className="absolute right-0 top-0 h-1 w-1/2 bg-linear-to-l from-primary/30 to-transparent" />
 
-                            <div className="relative space-y-4">
+                            <div className="relative space-y-4 ">
                                 <div className="flex items-start justify-between">
-                                    <div>
-                                        <h3 className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                                    <div className="text-white">
+                                        {/* <h3 className="text-xs font-medium uppercase tracking-wider">
                                             Active Status
-                                        </h3>
+                                        </h3> */}
                                         <p className="flex items-center gap-2 text-md font-semibold">
-                                            <span className="inline-block h-3 w-3 animate-pulse rounded-full bg-green-500" />
+                                            {/* <span className="inline-block h-3 w-3 animate-pulse rounded-full bg-green-500" /> */}
                                             Available Now
                                         </p>
                                     </div>
@@ -186,15 +206,15 @@ export function Hero() {
                                 </div>
 
                                 <div className="border-t pt-4">
-                                    <div className="flex items-center gap-3 text-sm">
+                                    <div className="flex items-center gap-3 text-sm text-white">
                                         <RiMapPinLine className="h-5 w-5 text-primary" />
                                         <span className="font-medium">Service Areas:</span>
                                     </div>
-                                    <div className="mt-2 flex flex-wrap gap-2">
+                                    <div className="mt-2 flex flex-wrap gap-1.5">
                                         {serviceAreas.map((area) => (
                                             <span
                                                 key={area.slug}
-                                                className="rounded border bg-muted/30 px-3 py-1 text-xs backdrop-blur-sm"
+                                                className="rounded border text-white bg-primary/10 px-3 py-1 text-xs backdrop-blur-sm"
                                             >
                                                 {area.name}
                                             </span>
@@ -203,9 +223,9 @@ export function Hero() {
                                 </div>
 
                                 <div className="border-t pt-4">
-                                    <div className="flex items-center gap-2 text-sm">
+                                    <div className="flex items-center gap-2 text-sm text-white">
                                         <span className="font-medium">Quick Quote:</span>
-                                        <span className="text-muted-foreground">
+                                        <span className="">
                                             No hidden fees, upfront pricing
                                         </span>
                                     </div>
@@ -213,19 +233,19 @@ export function Hero() {
 
                                 <div className="border-t pt-4">
                                     <div className="grid grid-cols-2 gap-3">
-                                        <div className="rounded border border-primary/10 bg-primary/5 p-3 backdrop-blur-sm">
+                                        <div className="rounded border border-primary/10 bg-white p-3 backdrop-blur-sm">
                                             <div className="text-2xl font-bold text-primary">90%</div>
-                                            <div className="text-xs text-muted-foreground">Onsite Repairs</div>
+                                            <div className="text-xs text-">Onsite Repairs</div>
                                         </div>
-                                        <div className="rounded border border-primary/10 bg-primary/5 p-3 backdrop-blur-sm">
+                                        <div className="rounded border border-primary/10 bg-white p-3 backdrop-blur-sm">
                                             <div className="text-2xl font-bold text-primary">100%</div>
-                                            <div className="text-xs text-muted-foreground">Transparent Pricing</div>
+                                            <div className="text-xs text-">Transparent Pricing</div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="border-t pt-4">
-                                    <div className="flex items-center justify-between text-xs">
+                                    <div className="flex items-center justify-between text-xs text-white">
                                         <div className="flex items-center gap-2">
                                             <RiShieldCheckLine className="h-3 w-3" />
                                             <span>Certified since {foundedYear}</span>
