@@ -7,12 +7,14 @@ import { FeaturedServices } from "@/components/view/FeaturedServices/FeaturedSer
 import { WhoWeAre } from "@/components/view/WhoWeAre/WhoWeAre";
 import { WhyChooseUs } from "@/components/view/WhyChooseUs/WhyChooseUs";
 import Reviews from "@/components/view/Reviews/Reviews";
+import HowItWorksAlt from "@/components/view/HowItWorks/HowItWorks";
 
 export default function HomePage() {
     return (
         <div>
             <Hero />
             <HowItWorks />
+            {/* <HowItWorksAlt /> */}
             <FeaturedServices />
             <WhoWeAre />
             <WhyChooseUs />
