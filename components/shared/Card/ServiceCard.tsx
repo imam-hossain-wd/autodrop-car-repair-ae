@@ -51,49 +51,9 @@ const iconMap: Record<string, any> = {
   "Car Repair Dubai": RiPianoLine,
 };
 
-const colorMap: Record<string, string> = {
-  "Car Battery Replacement": "border-primary/20 bg-primary/5",
-  "Jump Start Car": "border-amber-500/20 bg-amber-500/5",
-  "Car Computer Diagnostic": "border-blue-500/20 bg-blue-500/5",
-  "Car Alternator Repair": "border-purple-500/20 bg-purple-500/5",
-  "Car Fuel Pump Repair": "border-red-500/20 bg-red-500/5",
-  "Car Starter Motor Repair": "border-orange-500/20 bg-orange-500/5",
-  "Car AC Repair": "border-cyan-500/20 bg-cyan-500/5",
-  "Car Window Motor Repair": "border-indigo-500/20 bg-indigo-500/5",
-  "Radiator Replacement": "border-rose-500/20 bg-rose-500/5",
-  "ABS System Repair": "border-emerald-500/20 bg-emerald-500/5",
-  "Brake Pad Repair": "border-pink-500/20 bg-pink-500/5",
-  "Car Detailing Service": "border-teal-500/20 bg-teal-500/5",
-  "Emergency Car Repair": "border-red-500/20 bg-red-500/5",
-  "Car Mechanic Service": "border-sky-500/20 bg-sky-500/5",
-  "Oil Change Service": "border-lime-500/20 bg-lime-500/5",
-  "Car AC Gas Refill Service": "border-cyan-500/20 bg-cyan-500/5",
-  "Car Transmission Repair": "border-violet-500/20 bg-violet-500/5",
-  "Car Service Dubai": "border-indigo-500/20 bg-indigo-500/5",
-  "Car Repair Dubai": "border-primary/20 bg-primary/5",
-};
 
-const iconColorMap: Record<string, string> = {
-  "Car Battery Replacement": "text-primary",
-  "Jump Start Car": "text-amber-500",
-  "Car Computer Diagnostic": "text-blue-500",
-  "Car Alternator Repair": "text-purple-500",
-  "Car Fuel Pump Repair": "text-red-500",
-  "Car Starter Motor Repair": "text-orange-500",
-  "Car AC Repair": "text-cyan-500",
-  "Car Window Motor Repair": "text-indigo-500",
-  "Radiator Replacement": "text-rose-500",
-  "ABS System Repair": "text-emerald-500",
-  "Brake Pad Repair": "text-pink-500",
-  "Car Detailing Service": "text-teal-500",
-  "Emergency Car Repair": "text-red-500",
-  "Car Mechanic Service": "text-sky-500",
-  "Oil Change Service": "text-lime-500",
-  "Car AC Gas Refill Service": "text-cyan-500",
-  "Car Transmission Repair": "text-violet-500",
-  "Car Service Dubai": "text-indigo-500",
-  "Car Repair Dubai": "text-primary",
-};
+
+
 
 export interface ServiceCardProps {
   name: string;
@@ -116,13 +76,13 @@ export function ServiceCard({
   showArrow = true,
   defaultExpanded = false
 }: ServiceCardProps) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+  
   const Icon = iconMap[name] || RiToolsLine;
-  const colorClass = colorMap[name] || "border-primary/10 bg-primary/5";
-  const iconColor = iconColorMap[name] || "text-primary";
+  
+  
 
   const cardClasses = cn(
-    "group relative block overflow-hidden border bg-background transition-all duration-300 border-primary/30 shadow-xl shadow-primary/5",
+    "group relative block overflow-hidden border bg-white rounded transition-all duration-300 border-primary shadow-xl shadow-primary/5",
     {
       "p-5 md:p-6": variant === "default",
       "p-3 md:p-4": variant === "compact",
@@ -155,15 +115,15 @@ export function ServiceCard({
   return (
     <div className={cardClasses}>
       {/* Background gradient on hover */}
-      <div className={`absolute inset-0 ${colorClass} opacity-100 transition-opacity duration-500  bg-white`} />
+      <div className={`absolute inset-0  opacity-100 transition-opacity duration-500  bg-white`} />
       
       {/* Glow effect */}
-      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      {/* <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" /> */}
 
       {/* Content */}
-      <div className="relative">
+      <div className="relative ">
         {/* Header with Icon and Name */}
-        <div className="flex items-start gap-4">
+        <div className="flex items-center gap-4">
           {/* Icon with ring */}
           <div className="relative shrink-0">
             <div className={`absolute inset-0 rounded-full border border-black   blur-sm`} />
@@ -174,36 +134,17 @@ export function ServiceCard({
               <Icon className={cn(iconInnerSize[variant], "transition-transform duration-300 text-black")} />
             </div>
           </div>
-          {/* <div className="relative flex-shrink-0">
-            <div className={`absolute inset-0 rounded-full border ${colorClass} opacity-20 blur-sm`} />
-            <div className={cn(
-              "relative flex items-center justify-center rounded-full border bg-background/80 backdrop-blur-sm transition-all duration-300 group-hover:bg-background/60 group-hover:scale-110",
-              iconWrapperSize[variant]
-            )}>
-              <Icon className={cn(iconInnerSize[variant], iconColor, "transition-transform duration-300")} />
-            </div>
-          </div> */}
-
+          
           {/* Name and Link */}
-          <div className="flex-1 min-w-0">
+          <div className="flex min-w-0">
             <Link href={`/services/${slug}`} className="block">
               <h3 className={cn(
-                "font-semibold leading-tight tracking-tight text-foreground transition-colors hover:text-primary text-sm",
+                "font-semibold leading-tight tracking-tight text-foreground transition-colors hover:text-primary text-md",
                 // textSize[variant]
               )}>
                 {name}
               </h3>
             </Link>
-            
-            {showArrow && (
-              <Link 
-                href={`/services/${slug}`}
-                className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-primary transition-all  "
-              >
-                <span>Learn More</span>
-                <RiArrowRightSLine className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            )}
           </div>
         </div>
 
@@ -241,14 +182,15 @@ export function ServiceCard({
             <RiArrowRightSLine className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
+
       </div>
 
       {/* Corner accents */}
-      <div className="absolute right-0 top-0 h-6 w-6 border-r-2 border-t-2 transition-all duration-300 border-primary/20" />
-      <div className="absolute bottom-0 left-0 h-6 w-6 border-b-2 border-l-2 transition-all duration-300 border-primary/20" />
+      {/* <div className="absolute right-0 top-0 h-6 w-6 border-r-2 border-t-2 transition-all duration-300 border-primary/20" />
+      <div className="absolute bottom-0 left-0 h-6 w-6 border-b-2 border-l-2 transition-all duration-300 border-primary/20" /> */}
       
       {/* Subtle shimmer on hover */}
-      <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+      {/* <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" /> */}
     </div>
   );
 }

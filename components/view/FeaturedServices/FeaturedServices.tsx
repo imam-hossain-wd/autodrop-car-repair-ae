@@ -206,35 +206,27 @@ export function FeaturedServices({
   const displayServices = showAll ? baseServices : baseServices.slice(0, limit);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black/5">
-      {/* Ultra-Modern Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-linear-to-b from-background via-background/98 to-primary/5" />
-        <div className="absolute -left-1/4 -top-1/4 h-200 w-200 rounded-full bg-primary/5 blur-3xl" /> 
-        <div className="absolute -bottom-1/4 -right-1/4 h-150 w-150 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-100 w-100 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-size-[40px_40px]" />
-        <div className="absolute bottom-0 left-0 h-px w-2/3 bg-linear-to-r from-primary/30 to-transparent" />
-        <div className="absolute right-0 top-0 h-px w-1/2 bg-linear-to-l from-primary/30 to-transparent" />
-      </div>
+    <section className="relative w-full overflow-hidden ">
+
+   
 
       <div className="container relative mx-auto px-4 py-8 md:py-10 lg:py-12">
         {/* Section Header */}
         <div className="mb-8 md:mb-10">
           <div className="flex items-center gap-3">
-            <span className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
+            <span className="text-sm  font-medium uppercase tracking-[0.2em] ">
               Featured
             </span>
-            <div className="h-px flex-1 bg-linear-to-r from-primary/30 to-transparent" />
+            <div className="h-px w-[80%] flex-1 bg-primary" />
           </div>
           <div className="mt-3 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
+              <h2 className="text-2xl  font-bold tracking-tight md:text-3xl lg:text-4xl">
                 {title}
               </h2>
-              <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
+              <p className="mt-1 text-sm ">{subtitle}</p>
             </div>
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <div className="flex items-center gap-3 text-sm ">
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                 {responseTime} response
@@ -269,7 +261,7 @@ export function FeaturedServices({
           <div className="mt-10 flex justify-center">
             <Link
               href="/services"
-              className="group inline-flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-8 py-3.5 text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/10"
+              className="group inline-flex items-center gap-2 rounded border border-primary/30 bg-primary  px-8 py-3.5 text-sm font-medium text-black transition-all hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/10"
             >
               View All Services
               <RiArrowRightSLine className="h-5 w-5 transition-transform group-hover:translate-x-1" />
