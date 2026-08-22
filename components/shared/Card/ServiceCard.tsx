@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/shared/Card/ServiceCard.tsx
 "use client";
 
@@ -23,8 +25,6 @@ import {
   RiWrenchLine,
   RiPianoLine,
   RiCheckLine,
-  RiArrowUpSLine,
-  RiArrowDownSLine
 } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 
@@ -223,7 +223,7 @@ export function ServiceCard({
                   key={index} 
                   className="flex items-start gap-2 text-xs  transition-colors "
                 >
-                  <RiCheckLine className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-black" />
+                  <RiCheckLine className="mt-0.5 h-3.5 w-3.5 shrink-0 text-black" />
                   <span>{feature}</span>
                 </div>
               ))}
@@ -244,11 +244,11 @@ export function ServiceCard({
       </div>
 
       {/* Corner accents */}
-      <div className="absolute right-0 top-0 h-6 w-6 border-r-2 border-t-2 border-primary/0 transition-all duration-300 border-primary/20" />
-      <div className="absolute bottom-0 left-0 h-6 w-6 border-b-2 border-l-2 border-primary/0 transition-all duration-300 border-primary/20" />
+      <div className="absolute right-0 top-0 h-6 w-6 border-r-2 border-t-2 transition-all duration-300 border-primary/20" />
+      <div className="absolute bottom-0 left-0 h-6 w-6 border-b-2 border-l-2 transition-all duration-300 border-primary/20" />
       
       {/* Subtle shimmer on hover */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+      <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
     </div>
   );
 }

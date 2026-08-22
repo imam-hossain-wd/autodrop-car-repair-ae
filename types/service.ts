@@ -49,7 +49,7 @@ export interface ServiceDetail {
   name: string;
   metaTitle: string;
   metaDescription: string;
-  popular: boolean;
+  popular?: boolean;
   features: string[];
   slug: string;
   service_banner: StaticImageData | string; // Use StaticImageData for Next.js imports, or string for URLs

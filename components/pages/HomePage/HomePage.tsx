@@ -12,9 +12,7 @@ export default function HomePage() {
     return (
         <div>
             <Hero />
-            {/* <Extra /> */}
             <HowItWorks />
-            {/* <Services /> */}
             <FeaturedServices />
             <WhoWeAre />
             <WhyChooseUs />

@@ -1,19 +1,24 @@
 import { SiteConfigType } from "@/types/site";
 import { RiFacebookCircleFill, RiInstagramFill, RiMailLine, RiMapPinLine, RiPhoneLine, RiPinterestFill, RiYoutubeFill } from "@remixicon/react";
 
+// brand Name : AutoDrop Car Repair Mechanic Dubai
+// Category : Auto Repair Shop 
+// Address : 
+// Phone Number : 
+//  - Jabal Ali First - The Gardens - Dubai - United Arab Emirates
 export const SiteConfig:SiteConfigType = {
     authorName: "Md Zahed",
-    brandName: "AutoFix Mobile Mechanic Dubai",
-    url: "https://www.autofixmechanicdubai.com",
-    email: "autofixmechanicdubai@gmail.com",
-    description: "AutoFix Car Repair Dubai delivers 24/7 fast, reliable mobile car repair and emergency roadside assistance anywhere in Dubai within 5 to 15 minutes. Our certified mobile mechanics come directly to your home, office, or breakdown location with transparent pricing, advanced diagnostics, and guaranteed work.",
-    displayNumber: "+971 00 000 0000",
+    brandName: "AutoDrop Car Repair Mechanic Dubai",
+    url: "https://www.autodropcarrepairdubai.com",
+    email: "autodropcarrepair@gmail.com",
+    description: "AutoDrop Car Repair Dubai delivers 24/7 fast, reliable mobile car repair and emergency roadside assistance anywhere in Dubai within 5 to 15 minutes. Our certified mobile mechanics come directly to your home, office, or breakdown location with transparent pricing, advanced diagnostics, and guaranteed work.",
+    displayNumber: "+971 05 593 0256",
     ogImage:"/",
-    foundedYear:"2020",
-    numberCallLink: "tel:+971000000000",
-    whatsappCallLink: "https://wa.me/971000000000",
-    location: "Al Safa",
-    streetAddress: "19A Street",
+    foundedYear:"2019",
+    numberCallLink: "tel:+971055930256",
+    whatsappCallLink: "https://wa.me/971055930256",
+    location: "Jabal Ali First - The Gardens",
+    streetAddress: "Ibn Battuta Street ,",
     city: "Dubai",
     country: "UAE",
     founded: 2020,

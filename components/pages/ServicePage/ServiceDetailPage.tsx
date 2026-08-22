@@ -85,12 +85,12 @@ export default function ServiceDetailPage({ service }: ServicePageProps) {
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                   Available Now
                 </div>
-                {service.popular && (
+                {/* {service.popular && (
                   <div className="inline-flex items-center gap-2 rounded border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-500">
                     <RiStarLine className="h-3 w-3" />
                     Popular
                   </div>
-                )}
+                )} */}
               </div>
 
               <h1 className="mt-4 text-2xl font-bold tracking-tight text-white md:text-3xl lg:text-4xl">
