@@ -22,6 +22,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { SiteConfig } from "@/config/siteConfig";
+import logo from "@/assets/logo/autodrop-logo.png"
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -70,12 +71,13 @@ const Footer = () => {
                     <div className="space-y-5">
                         {/* Logo/Brand */}
                         <Link href="/" className="inline-block">
-                            <span className="text-2xl font-bold text-white tracking-tight">
+                            {/* <span className="text-2xl font-bold text-white tracking-tight">
                                 {brandName}
                             </span>
                             <span className="mt-1 block text-xs font-medium text-red-400">
                                 Mobile Mechanic Dubai
-                            </span>
+                            </span> */}
+                            <Image className="w-full h-auto" src={logo} width={120} height={120}  alt="AutoDrop Logo"/>
                         </Link>
 
                         <p className="text-sm leading-relaxed text-neutral-400 max-w-sm">

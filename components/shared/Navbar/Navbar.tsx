@@ -22,7 +22,8 @@ import {
 import { SiteConfig } from "@/config/siteConfig";
 import { services } from "@/data/services/services";
 import { cn } from "@/lib/utils";
-
+import logo from "@/assets/logo/autodrop-logo.png"
+import Image from "next/image";
 
 const {displayNumber}= SiteConfig;
 // Service categories for mega menu
@@ -107,7 +108,7 @@ export function Navbar() {
             href="/" 
             className="flex items-center gap-2.5 group"
           >
-            <div className="relative flex h-10 w-10 items-center justify-center rounded border border-primary/30 bg-primary/10 transition-all duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
+            {/* <div className="relative flex h-10 w-10 items-center justify-center rounded border border-primary/30 bg-primary/10 transition-all duration-300 group-hover:border-primary/50 group-hover:bg-primary/20">
               <RiCarLine className="h-5 w-5 text-primary transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-primary/20 animate-pulse" />
             </div>
@@ -118,7 +119,9 @@ export function Navbar() {
               <span className="block text-[10px] font-medium text-primary/70 tracking-widest uppercase">
                 Mobile Mechanic
               </span>
-            </div>
+            </div> */}
+
+            <Image src={logo} width={120} height={120}  alt="AutoDrop Logo"/>
           </Link>
 
           {/* Desktop Navigation */}

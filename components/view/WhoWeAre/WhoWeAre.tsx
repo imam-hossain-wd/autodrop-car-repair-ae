@@ -37,7 +37,7 @@ export function WhoWeAre() {
             <span className="text-sm font-medium uppercase tracking-wider text-primary">
               About Us
             </span>
-            <div className="h-px w-12 bg-primary/30" />
+            <div className="h-px w-60 bg-primary" />
           </div>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
             Who We Are
@@ -47,7 +47,7 @@ export function WhoWeAre() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-10">
           {/* Left Column - Text Content (60% on desktop) */}
           <div className="space-y-5 lg:col-span-3 lg:space-y-6">
-            <div className="space-y-4 text-base leading-relaxed text-muted-foreground md:text-md">
+            <div className="space-y-4 text-base leading-relaxed  md:text-md">
               <p className="max-w-2xl">{para1}</p>
               <p className="max-w-2xl">{para2}</p>
             </div>
