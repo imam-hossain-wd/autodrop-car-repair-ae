@@ -18,8 +18,6 @@ import { cn } from "@/lib/utils";
 import { Review, ReviewsProps } from "@/types/card";
 import ReviewCard from "@/components/shared/Card/ReviewCard";
 
-
-
 // Generate placeholder reviews
 const generatePlaceholderReviews = (): Review[] => {
   return [
@@ -186,17 +184,25 @@ export default function Reviews({
 
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Ultra-Modern Dark Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#0a0a0a]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-background/10 to-primary/5" />
-        <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#94a3b8_1px,transparent_1px),linear-gradient(to_bottom,#94a3b8_1px,transparent_1px)] bg-[size:50px_50px]" />
+        {/* Main dark background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-black" />
+
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 via-background/10 to-primary/5" />
+
+        {/* Grid */}
+        <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#94a3b8_1px,transparent_1px),linear-gradient(to_bottom,#94a3b8_1px,transparent_1px)] bg-size-[50px_50px]" />
+
+        {/* Light lines */}
         <div className="absolute inset-0 opacity-[0.04]">
-          <div className="absolute left-0 top-1/3 h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-          <div className="absolute right-0 top-2/3 h-px w-3/4 bg-gradient-to-l from-transparent via-primary/20 to-transparent" />
-          <div className="absolute left-1/4 top-0 h-px w-1/2 rotate-12 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-          <div className="absolute right-1/4 bottom-0 h-px w-1/2 -rotate-12 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+          <div className="absolute left-0 top-1/3 h-px w-full bg-linear-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="absolute right-0 top-2/3 h-px w-3/4 bg-linear-to-l from-transparent via-primary/20 to-transparent" />
+          <div className="absolute left-1/4 top-0 h-px w-1/2 rotate-12 bg-linear-to-r from-transparent via-primary/20 to-transparent" />
+          <div className="absolute right-1/4 bottom-0 h-px w-1/2 -rotate-12 bg-linear-to-r from-transparent via-primary/20 to-transparent" />
         </div>
+
+        {/* Geometric shapes */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute left-[15%] top-[20%] h-32 w-32 rotate-45 border border-primary/20" />
           <div className="absolute right-[20%] top-[15%] h-24 w-24 -rotate-12 border border-primary/15" />
@@ -204,8 +210,6 @@ export default function Reviews({
           <div className="absolute bottom-[20%] right-[15%] h-28 w-28 -rotate-45 border border-primary/15" />
         </div>
       </div>
-
-
 
       <div className="container relative mx-auto px-4 py-8 md:py-10 lg:py-12">
         {/* Section Header */}
@@ -355,5 +359,3 @@ export default function Reviews({
     </section>
   );
 }
-
-
