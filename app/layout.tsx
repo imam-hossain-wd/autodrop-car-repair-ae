@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/shared/Footer/Footer";
 import { Navbar } from "@/components/shared/Navbar/Navbar";
+import FloatingButtons from "@/components/shared/FloatingButtons/FloatingButtons";
 
 const notoSerif = Noto_Serif({ subsets: ['latin'], variable: '--font-serif' });
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <main>
         <Navbar />
+        <FloatingButtons />
         <body className="min-h-full flex flex-col">
 
           {children}
