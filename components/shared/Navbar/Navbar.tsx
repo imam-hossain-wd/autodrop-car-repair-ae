@@ -1,6 +1,4 @@
-/* eslint-disable react-hooks/set-state-in-effect */
-// components/layout/Navbar.tsx
-"use client";
+"use client"
 
 import { useState, useEffect } from "react";
 import Link from "next/link";

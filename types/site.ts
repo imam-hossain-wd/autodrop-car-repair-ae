@@ -61,7 +61,9 @@ export interface SiteConfigType {
     foundedYear: string;
     numberCallLink: string;
     whatsappCallLink: string;
+    mapsLink: string;
     location: string;
+
     streetAddress: string;
     city: string;
     country: string;

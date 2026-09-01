@@ -17,12 +17,13 @@ export const SiteConfig:SiteConfigType = {
     foundedYear:"2019",
     numberCallLink: "tel:+971055930256",
     whatsappCallLink: "https://wa.me/971055930256",
-    location: "Jabal Ali First - The Gardens",
-    streetAddress: "Ibn Battuta Street ,",
+    location: "Dubai Internet City",
+    streetAddress: ",",
     city: "Dubai",
     country: "UAE",
     founded: 2020,
     responseTime: "5-15 min",
+    mapsLink:"",
 
     GMB: {
         PlaceID: "",

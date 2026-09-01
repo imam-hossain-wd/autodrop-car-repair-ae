@@ -1,15 +1,12 @@
-// components/sections/who-we-are.tsx
-// Assumption: Asymmetric two-column layout - text left (60%), visual/stats right (40%) on desktop, stacked on mobile
-
 import { Card } from "@/components/ui/card";
 import { 
   RiCalendarLine, 
-  RiMapPinLine, 
-  RiTimeLine, 
+  RiMapPinLine,  
   RiShieldCheckLine,
   RiCarLine,
   RiCustomerServiceLine,
-  RiBuildingLine
+  RiBuildingLine,
+  RiClockwiseFill
 } from "@remixicon/react";
 import { SiteConfig } from "@/config/siteConfig";
 import { aboutUs } from "@/config/businessInfo";
@@ -47,7 +44,7 @@ export function WhoWeAre() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-10">
           {/* Left Column - Text Content (60% on desktop) */}
           <div className="space-y-5 lg:col-span-3 lg:space-y-6">
-            <div className="space-y-4 text-base leading-relaxed  md:text-md">
+            <div className="space-y-4 text-sm leading-relaxed  md:text-base text-gray-700">
               <p className="max-w-2xl">{para1}</p>
               <p className="max-w-2xl">{para2}</p>
             </div>
@@ -93,37 +90,37 @@ export function WhoWeAre() {
 
                 {/* Quick Facts */}
                 <div className="border-t pt-6">
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2 text-sm text-gray-700">
 
                     <div className="flex items-start gap-3">
-                      <RiTimeLine className="mt-0.5 h-4 w-4 text-primary/70" />
-                      <span className="text-muted-foreground">
+                      <RiClockwiseFill className="mt-0.5 h-4 w-4 text-primary" />
+                      <span className="">
                         {responseTime} Response Time
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <RiShieldCheckLine className="mt-0.5 h-4 w-4 text-primary/70" />
-                      <span className="text-muted-foreground">
+                      <RiShieldCheckLine className="mt-0.5 h-4 w-4 text-primary" />
+                      <span className="">
                         100% Certified Mechanic
                       </span>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <RiCarLine className="mt-0.5 h-4 w-4 text-primary/70" />
-                      <span className="text-muted-foreground">
+                      <RiCarLine className="mt-0.5 h-4 w-4 text-primary" />
+                      <span className="">
                         Fully equipped mobile garage
                       </span>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <RiCustomerServiceLine className="mt-0.5 h-4 w-4 text-primary/70" />
-                      <span className="text-muted-foreground">
+                      <RiCustomerServiceLine className="mt-0.5 h-4 w-4 text-primary" />
+                      <span className="">
                         24/7/365 emergency coverage
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <RiBuildingLine className="mt-0.5 h-4 w-4 text-primary/70" />
-                      <span className="text-muted-foreground">
+                      <RiBuildingLine className="mt-0.5 h-4 w-4 text-primary" />
+                      <span className="">
                         Headquartered in {location}
                       </span>
                     </div>
