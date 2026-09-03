@@ -1,9 +1,11 @@
 // Types
+
+
 export interface Project {
   title: string;
-  area: string;
   service: string;
-  image?: string;
+  area: string;
+  image?: string | any;
 }
 
 export interface ProjectsProps {

@@ -32,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, inter.variable, "font-serif", notoSerif.variable)}
     >
       <main>
+        
         <Navbar />
         <FloatingButtons />
         <body className="min-h-full flex flex-col">

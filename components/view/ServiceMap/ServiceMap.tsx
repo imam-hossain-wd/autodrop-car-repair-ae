@@ -205,7 +205,7 @@ export function ServiceMap() {
               <div className="border-2 bg-background/50 p-4 md:p-6">
                 {/* Header with count */}
 
-                <div className="rounded-lg -mt-2 mb-3 border border-primary/10 p-2">
+                {/* <div className="rounded-lg -mt-2 mb-3 border border-primary/10 p-2">
                   <div className="flex items-start gap-3">
                     <div className="">
                       <Image
@@ -227,7 +227,66 @@ export function ServiceMap() {
                       <p className="text-xs mt-1">Phone: {displayNumber}</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
+                {/* Premium Business Information Card */}
+<div className="relative mb-4 overflow-hidden rounded-2xl border  bg-primary p-4 shadow-lg">
+  {/* Decorative elements */}
+  <div className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-primary/5 blur-2xl" />
+  <div className="absolute -bottom-8 -left-8 h-16 w-16 rounded-full bg-primary/5 blur-2xl" />
+  
+  <div className="relative flex items-start gap-4">
+    {/* Logo with premium border */}
+    <div className="relative shrink-0">
+      <div className="absolute inset-0 rounded-lg bg-linear-to-br from-primary/20 to-primary/5 blur-sm" />
+      <div className="relative rounded-lg border border-primary/20 bg-background/80  shadow-sm backdrop-blur-sm">
+        <Image
+          className="rounded w-20 h-16"
+          src={logo}
+          width={70}
+          height={70}
+          alt={brandName}
+        />
+      </div>
+    </div>
+
+    {/* Business details */}
+    <div className="min-w-0 flex-1 space-y-1.5 pt-0.5">
+      {/* Brand name with premium styling */}
+      <div className="flex items-center gap-2">
+        <h3 className="text-base font-bold tracking-tight text-foreground">
+          {brandName}
+        </h3>
+      </div>
+
+      {/* Address with icon */}
+      <div className="flex items-start gap-1.5 text-xs">
+        <RiMapPinLine className="mt-0.5 h-4 w-4 shrink-0" />
+        <span className="leading-relaxed">
+          {location}, {city}
+        </span>
+      </div>
+
+      {/* Phone with icon and clickable link */}
+      <div className="flex items-center gap-1.5 text-xs">
+        <RiPhoneFill className="h-4 w-4 shrink-0" />
+        <a
+          href={`tel:${displayNumber.replace(/\s/g, '')}`}
+          className="font-medium transition-colors"
+        >
+          {displayNumber}
+        </a>
+      </div>
+
+    </div>
+
+    {/* Premium corner accent */}
+    <div className="absolute right-2 top-2 flex gap-0.5">
+      <span className="h-1 w-1 rounded-full bg-primary/20" />
+      <span className="h-1 w-1 rounded-full bg-primary/20" />
+      <span className="h-1 w-1 rounded-full bg-primary/20" />
+    </div>
+  </div>
+</div>
 
                 <div className="mb-4 flex items-center justify-between border-b pb-3">
                   <h3 className="text-sm font-semibold uppercase tracking-wider ">
@@ -278,23 +337,23 @@ export function ServiceMap() {
 
               {/* Quick stat bubbles */}
               <div className="mt-3  grid grid-cols-3 gap-2">
-                <div className="rounded border border-primary/10  p-2 text-center">
-                  <div className="text-sm font-bold text-primary">
+                <div className="rounded bg-black/90 text-white border border-primary/10  p-2 text-center">
+                  <div className="text-sm font-bold">
                     {responseTime}
                   </div>
-                  <div className="text-[10px] text-muted-foreground">
+                  <div className="text-[10px]">
                     Response
                   </div>
                 </div>
-                <div className="rounded border border-primary/10 bg-primary/5 p-2 text-center">
-                  <div className="text-sm font-bold text-primary">24/7</div>
-                  <div className="text-[10px] text-muted-foreground">
+                <div className="rounded bg-black/90 text-white  border border-primary/10 p-2 text-center">
+                  <div className="text-sm font-bold ">24/7</div>
+                  <div className="text-[10px] ">
                     Availability
                   </div>
                 </div>
-                <div className="rounded border border-primary/10 bg-primary/5 p-2 text-center">
-                  <div className="text-sm font-bold text-primary">100%</div>
-                  <div className="text-[10px] text-muted-foreground">
+                <div className="rounded border border-primary/10 bg-black/90 text-white p-2 text-center">
+                  <div className="text-sm font-bold ">100%</div>
+                  <div className="text-[10px]">
                     Coverage
                   </div>
                 </div>
