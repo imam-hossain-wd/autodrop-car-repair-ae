@@ -198,33 +198,6 @@ export function FAQ() {
                 ))}
               </Accordion>
             </div>
-
-            {/* Bottom CTA - Still have questions? */}
-            <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded border border-primary/10 bg-primary/5 p-4 md:mt-6 md:p-6">
-              <div className="flex items-center gap-3">
-                <div className="rounded-full border border-primary/20 bg-background/50 p-2">
-                  <RiCustomerServiceLine className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium">Still have questions?</p>
-                  <p className="text-xs text-muted-foreground">We're here to help 24/7</p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <a
-                  href={SiteConfig.numberCallLink}
-                  className="inline-flex items-center gap-1.5 rounded border bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  Call Now
-                </a>
-                <a
-                  href={SiteConfig.whatsappCallLink}
-                  className="inline-flex items-center gap-1.5 rounded border border-primary/20 px-4 py-2 text-xs font-medium transition-colors hover:bg-primary/5"
-                >
-                  WhatsApp Us
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Sidebar - Quick Stats (25% on desktop) */}

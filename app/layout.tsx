@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AutoFix Mobile Mechanic",
-  description: "Autofix Mobile Mechanic dubai",
+  title: "AutoDrop Car Repair Mobile Mechanic Dubai",
+  description: "AutoDrop Car Repair Mobile Mechanic Dubai is professional car repair service in Dubai. We provide mobile mechanic services for all types of vehicles, including cars, trucks, and motorcycles. Our team of experienced mechanics is available 24/7 to provide emergency roadside assistance and car repair services at your location.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

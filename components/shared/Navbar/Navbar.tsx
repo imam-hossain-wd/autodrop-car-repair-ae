@@ -119,7 +119,7 @@ export function Navbar() {
               </span>
             </div> */}
 
-            <Image src={logo} width={120} height={120}  alt="AutoDrop Logo"/>
+            <Image className="w-28 h-16" src={logo} width={120} height={120}  alt="AutoDrop Logo"/>
           </Link>
 
           {/* Desktop Navigation */}
@@ -197,13 +197,14 @@ export function Navbar() {
           </nav>
 
           {/* Right Side - Contact & CTA */}
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="items-center gap-3 lg:flex">
             <Link
               href={SiteConfig.numberCallLink}
-              className="flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:border-primary/50"
+              className="flex items-center gap-2 rounded border border-primary/30 bg-primary/10 px-4 py-2 text-xs md:text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:border-primary/50"
             >
               <RiPhoneLine className="h-4 w-4" />
-              <span className="hidden xl:inline">{SiteConfig?.displayNumber}</span>
+              <span className=" xl:inline">+05 593 0256</span>
+              {/* <span className=" xl:inline">{SiteConfig?.displayNumber}</span> */}
             </Link>
           </div>
 

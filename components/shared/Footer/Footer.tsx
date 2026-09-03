@@ -1,11 +1,4 @@
-// components/Footer.tsx
-"use client";
-
 import {
-    RiFacebookCircleFill,
-    RiInstagramFill,
-    RiPinterestFill,
-    RiYoutubeFill,
     RiMapPinLine,
     RiPhoneLine,
     RiMailLine,
@@ -14,9 +7,7 @@ import {
     RiShieldCheckLine,
     RiTimeLine,
     RiStarLine,
-    RiCarLine,
     RiRoadsterLine,
-    RiBuildingLine,
     RiGlobalLine,
 } from "@remixicon/react";
 import Link from "next/link";
@@ -70,14 +61,14 @@ const Footer = () => {
                     {/* Column 1: Brand Info */}
                     <div className="space-y-5">
                         {/* Logo/Brand */}
-                        <Link href="/" className="inline-block">
+                        <Link  href="/" className="w-full">
                             {/* <span className="text-2xl font-bold text-white tracking-tight">
                                 {brandName}
                             </span>
                             <span className="mt-1 block text-xs font-medium text-red-400">
                                 Mobile Mechanic Dubai
                             </span> */}
-                            <Image className="w-full h-auto" src={logo} width={120} height={120}  alt="AutoDrop Logo"/>
+                            <Image className="w-full mb-3 h-40" src={logo} width={800} height={600} quality={100} alt="AutoDrop Logo"/>
                         </Link>
 
                         <p className="text-sm leading-relaxed text-neutral-400 max-w-sm">

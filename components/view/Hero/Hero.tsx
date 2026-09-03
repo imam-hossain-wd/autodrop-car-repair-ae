@@ -90,7 +90,7 @@ export function Hero() {
             <section className="container relative mx-auto px-4 py-12 md:py-16 lg:py-20">
                 <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
                     {/* Left Column - Content */}
-                    <div className="flex flex-col justify-center space-y-6 md:space-y-8">
+                    <div className="flex flex-col justify-center space-y-4 md:space-y-6">
                         {/* Brand Badge - Premium */}
                         <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur-sm">
                             <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
@@ -99,30 +99,30 @@ export function Hero() {
                         </div>
 
                         <div className="space-y-4 md:space-y-5">
-                            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-                                <span className="block">24/7 Mobile</span>
-                                <span className="block bg-linear-to-r from-primary via-yellow-400 to-primary/70 bg-clip-text text-transparent">
-                                    Mechanic
+                            <h1 className="text-2xl font-bold leading-normal text-white md:text-5xl">
+                                <span className="block">24/7 AutoDrop Car Repair and Mobile <span className="text-primary">Mechanic</span></span>
+                                <span className="block bg-linear-to-r from-primary via-yellow-400 to-primary/70 bg-clip-text text-transparent my-1">
+                                     Services in Dubai
                                 </span>
-                                <span className="block mt-2 text-2xl font-normal text-white/80 md:text-3xl lg:text-4xl">
+                                <span className="block mt-2 text-lg lg:text-2xl font-normal text-white/80">
                                     Comes to You in <span className="text-primary font-semibold">{responseTime}</span>
-                                    <span className="block text-lg text-white/60 md:text-xl">
+                                    <span className="block text-lg text-white md:text-xl">
                                         Anywhere in {city}
                                     </span>
                                 </span>
                             </h1>
 
-                            <p className="max-w-xl text-base leading-relaxed text-white/70 md:text-lg">
+                            <p className="max-w-xl text-sm leading-relaxed text-white/70 md:text-lg">
                                 Certified mechanics, transparent upfront pricing, and dealer-grade diagnostics
                                 delivered to your location. <span className="text-white/90">No towing fees, no workshop waiting.</span>
                             </p>
                         </div>
 
                         {/* CTA Buttons - Enhanced */}
-                        <div className="flex flex-wrap gap-3 md:gap-4">
+                        {/* <div className="flex flex-wrap gap-2 md:gap-4">
                             <Button
                                 size="lg"
-                                className="relative overflow-hidden bg-primary px-8 py-6 text-base font-semibold text-black"
+                                className="relative overflow-hidden bg-primary px-4 py-4 lg:px-8 lg:py-6 text-base font-semibold text-black"
                             >
                                 <span className="absolute inset-0 bg-linear-to-r from-primary via-yellow-300 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 <Link className="relative flex items-center" href={numberCallLink}>
@@ -135,17 +135,17 @@ export function Hero() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="group border-primary/30 bg-white/5 px-8 py-6 text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-primary/10 hover:border-primary/50 "
+                                className="group border-primary/30 bg-white/5 px-4 py-4 lg:px-8 lg:py-6 text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-primary/10 hover:border-primary/50 "
                             >
                                 <Link className="flex items-center hover:text-primary" href={whatsappCallLink}>
                                     <RiWhatsappLine className="mr-2 h-5 w-5 text-primarygroup-hover:scale-110 transition-transform" />
                                     WhatsApp Us
                                 </Link>
                             </Button>
-                        </div>
+                        </div> */}
 
                         {/* Trust Strip - Premium */}
-                        <div className="flex flex-wrap items-center gap-6 pt-4 text-sm text-white/80 md:text-base">
+                        <div className="flex flex-wrap items-center gap-6 pt- text-sm text-white/80 md:text-base">
                             <div className="flex items-center gap-2.5">
                                 <div className="rounded-full border border-primary/20 bg-primary/10 p-2 backdrop-blur-sm">
                                     <RiTimeLine className="h-4 w-4 text-primary md:h-5 md:w-5" />
@@ -200,12 +200,12 @@ export function Hero() {
                                         {/* <span className="text-xs font-medium uppercase tracking-wider text-primary/70">
                                             Service Status
                                         </span> */}
-                                        <p className="flex items-center gap-2 text-lg font-semibold text-white">
+                                        <p className="flex items-center gap-2 text-md md:text-lg font-semibold text-white">
                                             <span className="inline-block h-3 w-3 rounded-full bg-primary animate-pulse" />
                                             Available Now
                                         </p>
                                     </div>
-                                    <span className="relative rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-black ">
+                                    <span className="relative rounded-full bg-primary px-4 py-1 md:py-1.5 text-[11px] md:text-sm font-bold text-black ">
                                         <span className="absolute -inset-px rounded-full border border-primary/30" />
                                         {responseTime} Response
                                     </span>
@@ -267,7 +267,7 @@ export function Hero() {
                                 </div>
 
                                 {/* Footer - Premium */}
-                                <div className="flex items-center justify-between border-t border-white/10 pt-4">
+                                <div className=" hidden md:flex items-center justify-between border-t border-white/10 pt-">
                                     <div className="flex items-center gap-2 text-xs text-white/60">
                                         <RiShieldCheckLine className="h-3.5 w-3.5 text-primary" />
                                         <span>Certified since {foundedYear}</span>

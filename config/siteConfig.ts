@@ -22,7 +22,7 @@ export const SiteConfig:SiteConfigType = {
     city: "Dubai",
     country: "UAE",
     founded: 2020,
-    responseTime: "5-15 min",
+    responseTime: "5-30 min",
     mapsLink:"",
 
     GMB: {

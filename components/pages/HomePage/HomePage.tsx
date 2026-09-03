@@ -8,6 +8,7 @@ import { WhoWeAre } from "@/components/view/WhoWeAre/WhoWeAre";
 import { WhyChooseUs } from "@/components/view/WhyChooseUs/WhyChooseUs";
 import Reviews from "@/components/view/Reviews/Reviews";
 import HowItWorksAlt from "@/components/view/HowItWorks/HowItWorks";
+import FinalCTA from "@/components/view/FinalCTA/FinalCTA";
 
 export default function HomePage() {
     return (
@@ -22,6 +23,7 @@ export default function HomePage() {
             <ServiceMap />
             <Reviews />
             <FAQ />
+            <FinalCTA />
         </div>
     )
 }
