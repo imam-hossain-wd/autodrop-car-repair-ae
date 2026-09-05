@@ -177,7 +177,7 @@ export const SiteConfig: SiteConfigType = {
     navItems: [
         { name: "Home", href: "/" },
         { name: "Services", href: "/services" },
-        { name: "Areas We Serve", href: "/area-we-serve" },
+        { name: "Areas We Serve", href: "/service-area" },
         { name: "Projects", href: "/projects" },
         { name: "About", href: "/about" },
         { name: "Contact", href: "/contact" },

@@ -167,15 +167,15 @@ const Footer = () => {
                         <ul className="space-y-2">
                             {serviceAreas.map((area) => (
                                 <li key={area.slug}>
-                                    <Link
-                                        href={`/area-we-serve/${area.slug}`}
+                                    <div
+                                        // href={`/service-area/${area.slug}`}
                                         className="group flex items-center gap-2 text-sm text-neutral-400 transition-colors hover:text-white"
                                     >
                                         <div className="h-1 w-1 rounded-full bg-blue-400/30 group-hover:bg-blue-400 transition-colors" />
                                         <span className="group-hover:translate-x-0.5 transition-transform duration-200">
                                             {area.name}
                                         </span>
-                                    </Link>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
