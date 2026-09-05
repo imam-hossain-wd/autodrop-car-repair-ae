@@ -1,19 +1,21 @@
 import { SiteConfig } from "@/config/siteConfig";
 
 export const siteMetadata = {
-  // Root / Home Page (/)
   home: {
-    title: `24/7 Mobile Car Repair Service Dubai | ${SiteConfig.brandName}`,
-    description: `${SiteConfig.description} Fast doorstep battery replacement, AC repair, diagnostics, & emergency mechanic service. Call ${SiteConfig.displayNumber}!`,
+    title: "Mobile Mechanic Dubai | 24/7 Car Repair & Battery Replacement",
+    description:
+      "Fast 24/7 mobile car repair & battery replacement in Dubai. 5–30 min arrival for onsite diagnostics, AC repair, & mechanics. We come to you—call now!",
     verification: {
-      google: "ytYG9-y7sI4wREsZZ3xJie3eyAobbPCbKz6vCRA8Gz4",
+      google: "Ojd1AEXWIAI_xRxpqHZlCQ8xWNVrmUaTE1Dtf24pJZ8",
     },
+    // Ojd1AEXWIAI_xRxpqHZlCQ8xWNVrmUaTE1Dtf24pJZ8
     alternates: {
       canonical: SiteConfig.url,
     },
     openGraph: {
-      title: `24/7 Mobile Car Repair Dubai | ${SiteConfig.brandName}`,
-      description: SiteConfig.description,
+      title: "Mobile Mechanic Dubai | 24/7 Car Repair & Battery Replacement",
+      description:
+        "Fast 24/7 mobile car repair & battery replacement in Dubai. 5–30 min arrival for onsite diagnostics, AC repair, & mechanics. We come to you—call now!",
       url: SiteConfig.url,
       siteName: SiteConfig.brandName,
       images: [{ url: SiteConfig.ogImage, width: 1200, height: 630 }],
@@ -23,8 +25,9 @@ export const siteMetadata = {
 
   // Services Main Hub (/services)
   services: {
-    title: `Mobile Car Repair & Mechanic Services in Dubai | 24/7 ${SiteConfig.brandName}`,
-    description: `Professional auto repair services in Dubai: battery replacement, jump start, OBD computer diagnostics, AC repair, & brake service at your location.`,
+    title: "Mobile Car Repair Services Dubai | 24/7 Onsite Mechanic",
+    description:
+      "Comprehensive mobile mechanic services in Dubai. Car battery replacement, diagnostics, brake repair, AC refill & emergency roadside assistance at your doorstep.",
     alternates: {
       canonical: `${SiteConfig.url}/services`,
     },
@@ -32,10 +35,22 @@ export const siteMetadata = {
 
   // Area We Serve (/area-we-serve)
   areaWeServe: {
-    title: `24/7 Mobile Mechanic Near Me | Service Areas in Dubai | ${SiteConfig.brandName}`,
-    description: `On-demand mobile car mechanics dispatched across Business Bay, Downtown, Al Warqa, Mirdif, International City & all Dubai areas. Fast arrival!`,
+    title:
+      "Mobile Car Mechanic Service Areas Dubai | 24/7 Roadside Assistance",
+    description:
+      "AutoDrop serves Dubai Marina, JLT, Palm Jumeirah, JVC, Al Barsha & key areas. Rapid 15-minute onsite mobile car repair and battery replacement across Dubai.",
     alternates: {
       canonical: `${SiteConfig.url}/area-we-serve`,
+    },
+  },
+
+  // Projects (/projects)
+  projects: {
+    title: "Our Repairs & Recent Work | AutoDrop Mobile Mechanic Dubai",
+    description:
+      "Browse our recent mobile car repairs, complex ECU diagnostics, and battery replacements completed onsite across Dubai Marina, Palm Jumeirah, and JVC.",
+    alternates: {
+      canonical: `${SiteConfig.url}/projects`,
     },
   },
 
@@ -59,8 +74,9 @@ export const siteMetadata = {
 
   // Contact Us (/contact)
   contact: {
-    title: `Contact 24/7 Mobile Mechanic Dubai | Call ${SiteConfig.displayNumber}`,
-    description: `Need an emergency mechanic in Dubai? Contact ${SiteConfig.brandName} at ${SiteConfig.displayNumber} or WhatsApp for immediate roadside response.`,
+    title: "Contact 24/7 Mobile Mechanic Dubai | AutoDrop Car Repair",
+    description:
+      "Need emergency car repair or a battery swap in Dubai? Contact AutoDrop now. Rapid 5-30 minute dispatch to your location anywhere in Dubai.",
     alternates: {
       canonical: `${SiteConfig.url}/contact`,
     },
@@ -68,8 +84,9 @@ export const siteMetadata = {
 
   // About Us (/about)
   about: {
-    title: `About ${SiteConfig.brandName} | Certified Mobile Car Mechanics Dubai`,
-    description: `Established in ${SiteConfig.foundedYear}, ${SiteConfig.brandName} provides trusted 24/7 mobile auto repair services across all Dubai communities.`,
+    title: "About AutoDrop Dubai | Certified Mobile Mechanics Since 2016",
+    description:
+      "Operating since 2016, AutoDrop is Dubai’s trusted 24/7 mobile mechanic service. Certified technicians, transparent pricing, and dealer-level equipment.",
     alternates: {
       canonical: `${SiteConfig.url}/about`,
     },

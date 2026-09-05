@@ -1,6 +1,8 @@
 import ContactPage from '@/components/pages/ContactPage/ContactPage'
-import React from 'react'
+import { siteMetadata } from '@/seo/metaData';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = siteMetadata.contact
 export default function Contact() {
   return <ContactPage />
 }

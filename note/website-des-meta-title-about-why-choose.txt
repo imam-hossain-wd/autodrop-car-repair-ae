@@ -1,0 +1,112 @@
+### Metadata Configuration (`app/layout.js` or Individual Page `page.js`)
+
+#### Home Page (`/`)
+
+* **Meta Title:** Mobile Mechanic Dubai | 24/7 Car Repair & Battery Replacement
+* **Meta Description:** Fast 24/7 mobile car repair & battery replacement in Dubai. 5–30 min arrival for onsite diagnostics, AC repair, & mechanics. We come to you—call now!
+
+#### Services Page (`/services`)
+
+* **Meta Title:** Mobile Car Repair Services Dubai | 24/7 Onsite Mechanic
+* **Meta Description:** Comprehensive mobile mechanic services in Dubai. Car battery replacement, diagnostics, brake repair, AC refill & emergency roadside assistance at your doorstep.
+
+#### Area We Serve Page (`/area-we-serve`)
+
+* **Meta Title:** Mobile Car Mechanic Service Areas Dubai | 24/7 Roadside Assistance
+* **Meta Description:** AutoDrop serves Dubai Marina, JLT, Palm Jumeirah, JVC, Al Barsha & key areas. Rapid 15-minute onsite mobile car repair and battery replacement across Dubai.
+
+#### About Us Page (`/about`)
+
+* **Meta Title:** About AutoDrop Dubai | Certified Mobile Mechanics Since 2016
+* **Meta Description:** Operating since 2016, AutoDrop is Dubai’s trusted 24/7 mobile mechanic service. Certified technicians, transparent pricing, and dealer-level equipment.
+
+#### Projects Page (`/projects`)
+
+* **Meta Title:** Our Repairs & Recent Work | AutoDrop Mobile Mechanic Dubai
+* **Meta Description:** Browse our recent mobile car repairs, complex ECU diagnostics, and battery replacements completed onsite across Dubai Marina, Palm Jumeirah, and JVC.
+
+#### Contact Us Page (`/contact`)
+
+* **Meta Title:** Contact 24/7 Mobile Mechanic Dubai | AutoDrop Car Repair
+* **Meta Description:** Need emergency car repair or a battery swap in Dubai? Contact AutoDrop now. Rapid 5-30 minute dispatch to your location anywhere in Dubai.
+
+---
+
+### Business Description (Schema & Directory Ready)
+
+AutoDrop Car Repair Mobile Mechanic Dubai is a premier 24/7 mobile auto repair and battery replacement service based in Dubai Internet City. Founded in 2016, AutoDrop provides comprehensive onsite vehicle maintenance and emergency roadside assistance across major Dubai communities, including Dubai Marina, JLT, Palm Jumeirah, JVC, and Al Barsha.
+
+By delivering dealer-level computer diagnostics, battery installation, brake servicing, AC repair, and mechanical fixes directly to the customer’s doorstep or roadside location, AutoDrop eliminates the hassle and high costs of towing. Every service is backed by RTA-compliant auto electricians, 100% genuine GCC-spec components, transparent pricing with no hidden fees, and rapid 5-to-30-minute dispatch response times 24 hours a day.
+
+---
+
+### Website Content: About Us
+
+**Heading:** Onsite Excellence: Dubai’s Trusted 24/7 Mobile Car Repair Partner Since 2016
+
+Founded in 2016, AutoDrop Car Repair Mobile Mechanic Dubai was built on a single, uncompromising principle: car owners in Dubai deserve fast, honest, and expert automotive care without the disruption of towing or waiting days at a garage. Operating directly out of Dubai Internet City, our fully equipped mobile workshop units bring certified mechanics and advanced diagnostic systems straight to your doorstep, workplace, or roadside location across Dubai.
+
+Whether you are stranded in basement parking in Dubai Marina, require an emergency battery replacement in Palm Jumeirah, or need complete vehicle computer diagnostics in JVC, AutoDrop bridges the gap between workshop precision and onsite convenience. We combine traditional workshop reliability with rapid mobile dispatch units capable of reaching your location within 5 to 30 minutes, 24 hours a day, 365 days a year.
+
+Our team consists of RTA-compliant mechanics and auto electricians specialized in handling Asian, American, and high-end European vehicles including BMW, Mercedes-Benz, Porsche, and Range Rover. From delicate battery memory-saver procedures to complex system diagnostics, we prioritize precision, speed, and absolute satisfaction on every job site.
+
+---
+
+### Website Content: Why Choose Us
+
+**Heading:** The AutoDrop Difference: Fast, Transparent, Onsite Automotive Care
+
+**1. Rapid 5–30 Minute Emergency Dispatch**
+
+Traffic delays and stranded vehicles demand immediate action. Our strategically positioned mobile fleet guarantees arrival at your location anywhere in Dubai within 5 to 30 minutes, keeping your schedule uninterrupted and eliminating expensive towing fees.
+
+**2. Dealer-Level Diagnostics & Certified Technicians**
+
+Our team includes certified auto electricians equipped with dealer-level ECU diagnostic scanners and Battery Management System (BMS) coding tools. We perform precise troubleshooting on luxury European cars and everyday commuters alike with zero risk to vehicle memory or electrical integrity.
+
+**3. 100% Genuine GCC-Spec Parts & Batteries**
+
+Dubai’s extreme climate demands rugged components. We supply and install fresh, 100% authentic GCC-spec batteries (Varta, Amaron, Solite, Bosch, ACDelco) built to withstand extreme summer heat, backed by a 12 to 24-month doorstep replacement warranty.
+
+**4. Upfront & Transparent Pricing**
+
+We operate with clear pricing policies. You receive a detailed quote before any work begins, with zero hidden charges or unexpected roadside service fees. You pay only after the installation, final system check, and diagnostic validation are complete.
+
+**5. 24/7 Doorstep Service & Onsite Workshop Capability**
+
+From simple jump starts, oil changes, and AC gas refills to advanced mechanical repairs, radiator replacements, and brake jobs—we handle both mobile roadside emergencies and comprehensive workshop overhauls seamlessly.
+
+---
+
+### Next.js (App Router) SEO Implementation Example
+
+For maximum search performance, export your metadata dynamically or statically in your `page.js` files:
+
+```javascript
+// app/about/page.js
+
+export const metadata = {
+  title: "About AutoDrop Dubai | Certified Mobile Mechanics Since 2016",
+  description: "Operating since 2016, AutoDrop is Dubai’s trusted 24/7 mobile mechanic service. Certified technicians, transparent pricing, and dealer-level equipment.",
+  openGraph: {
+    title: "About AutoDrop Dubai | Certified Mobile Mechanics Since 2016",
+    description: "Operating since 2016, AutoDrop is Dubai’s trusted 24/7 mobile mechanic service.",
+    url: "https://autodropcarrepair.ae/about",
+    siteName: "AutoDrop Car Repair Mobile Mechanic Dubai",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://autodropcarrepair.ae/about",
+  },
+};
+
+export default function AboutPage() {
+  return (
+    <main>
+      <h1>Onsite Excellence: Dubai’s Trusted 24/7 Mobile Car Repair Partner</h1>
+      {/* Page Content */}
+    </main>
+  );
+}
+
+```
