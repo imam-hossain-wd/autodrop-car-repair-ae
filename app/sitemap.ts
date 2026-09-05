@@ -7,7 +7,7 @@ export default async function sitemap(){
 
  
   const staticPages = [
-    "", // Home page
+    "", 
     "/services",
     "/service-area",
     "/about",

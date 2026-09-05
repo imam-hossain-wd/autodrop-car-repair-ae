@@ -187,7 +187,7 @@ export const SiteConfig: SiteConfigType = {
         { title: "About Us", href: "/about" },
         { title: "Contact", href: "/contact" },
         { title: "Services", href: "/services" },
-        { title: "Areas We Serve", href: "/area-we-serve" },
+        { title: "Areas We Serve", href: "/service-area" },
         { title: "Projects", href: "/projects" },
         { title: "Sitemap", href: "/sitemap.xml" }
     ],

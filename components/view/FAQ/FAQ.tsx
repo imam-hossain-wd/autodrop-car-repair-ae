@@ -20,50 +20,51 @@ import {
   RiCustomerServiceLine
 } from "@remixicon/react";
 import { SiteConfig } from "@/config/siteConfig";
+import { faqData } from "@/data/faq";
 
 // FAQ data - Single source of truth
-const faqData = [
-  {
-    id: "faq-1",
-    question: "How quickly can you arrive at my location?",
-    answer: `We guarantee a rapid ${SiteConfig.responseTime} response time across all of ${SiteConfig.city}. Our mobile service units are strategically positioned near major highways and arterial roads to ensure the fastest emergency roadside response in the region. We operate 24/7/365, including weekends and public holidays.`
-  },
-  {
-    id: "faq-2",
-    question: "What areas do you serve in Dubai?",
-    answer: `We serve all major areas across ${SiteConfig.city}, including ${SiteConfig.serviceAreas.map(a => a.name).join(", ")}. Our headquarters is located in ${SiteConfig.location}, and we cover the entire city with our mobile service units. No matter where you are in ${SiteConfig.city} - home, office, or roadside - we come to you.`
-  },
-  {
-    id: "faq-3",
-    question: "How does your pricing work? Is it transparent?",
-    answer: `We provide 100% transparent, upfront pricing with zero hidden call-out fees or unexpected charges. Before any work begins, we provide clear, line-item estimates so you know exactly what to expect. Our commitment to transparent pricing means no surprises - just honest, fair rates for dealer-grade service.`
-  },
-  {
-    id: "faq-4",
-    question: "What payment methods do you accept?",
-    answer: `We accept all major payment methods for your convenience. This includes cash, credit/debit cards, and bank transfers. Payment is processed upon completion of the repair, after you've approved the work and are satisfied with the service. We believe in complete transparency from start to finish.`
-  },
-  {
-    id: "faq-5",
-    question: "What types of vehicles do you service?",
-    answer: `Our certified mechanics are multi-brand trained and equipped to handle all makes and models of vehicles. From luxury cars to everyday commuters, we service the full spectrum of vehicles on ${SiteConfig.city}'s roads. Our dealership-level diagnostic scanners and specialized tools allow us to work on any vehicle with precision and expertise.`
-  },
-  {
-    id: "faq-6",
-    question: "Is there a warranty on your repairs?",
-    answer: `All repairs are executed by certified technicians using original OEM-grade spare parts and are fully backed by our service guarantee for total peace of mind. We stand behind our workmanship and the quality of parts we use. If you experience any issues related to the repair, we'll make it right.`
-  },
-  {
-    id: "faq-7",
-    question: "Do you provide 24/7 emergency repair services?",
-    answer: `Yes! Vehicle breakdowns happen without warning, which is why our emergency repair team operates round-the-clock across all ${SiteConfig.city} residential and commercial districts, including weekends and public holidays. Whether it's 2 PM or 2 AM, our mobile mechanics are ready to assist you anywhere in ${SiteConfig.city}.`
-  },
-  {
-    id: "faq-8",
-    question: "What types of repairs can you do on-site?",
-    answer: `We complete 90% of repairs on-site with our fully equipped mobile garage. Our services range from rapid battery replacements and emergency jump starts to complex computer diagnostics, AC gas refills, mechanical repairs, and more. Our mobile units carry dealer-grade diagnostic scanners and specialized tools to handle complex issues on the spot - saving you expensive towing costs.`
-  }
-];
+// const faqData = [
+//   {
+//     id: "faq-1",
+//     question: "How quickly can you arrive at my location?",
+//     answer: `We guarantee a rapid ${SiteConfig.responseTime} response time across all of ${SiteConfig.city}. Our mobile service units are strategically positioned near major highways and arterial roads to ensure the fastest emergency roadside response in the region. We operate 24/7/365, including weekends and public holidays.`
+//   },
+//   {
+//     id: "faq-2",
+//     question: "What areas do you serve in Dubai?",
+//     answer: `We serve all major areas across ${SiteConfig.city}, including ${SiteConfig.serviceAreas.map(a => a.name).join(", ")}. Our headquarters is located in ${SiteConfig.location}, and we cover the entire city with our mobile service units. No matter where you are in ${SiteConfig.city} - home, office, or roadside - we come to you.`
+//   },
+//   {
+//     id: "faq-3",
+//     question: "How does your pricing work? Is it transparent?",
+//     answer: `We provide 100% transparent, upfront pricing with zero hidden call-out fees or unexpected charges. Before any wsitemapsork begins, we provide clear, line-item estimates so you know exactly what to expect. Our commitment to transparent pricing means no surprises - just honest, fair rates for dealer-grade service.`
+//   },
+//   {
+//     id: "faq-4",
+//     question: "What payment methods do you accept?",
+//     answer: `We accept all major payment methods for your convenience. This includes cash, credit/debit cards, and bank transfers. Payment is processed upon completion of the repair, after you've approved the work and are satisfied with the service. We believe in complete transparency from start to finish.`
+//   },
+//   {
+//     id: "faq-5",
+//     question: "What types of vehicles do you service?",
+//     answer: `Our certified mechanics are multi-brand trained and equipped to handle all makes and models of vehicles. From luxury cars to everyday commuters, we service the full spectrum of vehicles on ${SiteConfig.city}'s roads. Our dealership-level diagnostic scanners and specialized tools allow us to work on any vehicle with precision and expertise.`
+//   },
+//   {
+//     id: "faq-6",
+//     question: "Is there a warranty on your repairs?",
+//     answer: `All repairs are executed by certified technicians using original OEM-grade spare parts and are fully backed by our service guarantee for total peace of mind. We stand behind our workmanship and the quality of parts we use. If you experience any issues related to the repair, we'll make it right.`
+//   },
+//   {
+//     id: "faq-7",
+//     question: "Do you provide 24/7 emergency repair services?",
+//     answer: `Yes! Vehicle breakdowns happen without warning, which is why our emergency repair team operates round-the-clock across all ${SiteConfig.city} residential and commercial districts, including weekends and public holidays. Whether it's 2 PM or 2 AM, our mobile mechanics are ready to assist you anywhere in ${SiteConfig.city}.`
+//   },
+//   {
+//     id: "faq-8",
+//     question: "What types of repairs can you do on-site?",
+//     answer: `We complete 90% of repairs on-site with our fully equipped mobile garage. Our services range from rapid battery replacements and emergency jump starts to complex computer diagnostics, AC gas refills, mechanical repairs, and more. Our mobile units carry dealer-grade diagnostic scanners and specialized tools to handle complex issues on the spot - saving you expensive towing costs.`
+//   }
+// ];
 
 // Generate JSON-LD FAQPage schema
 const generateFAQSchema = () => {
